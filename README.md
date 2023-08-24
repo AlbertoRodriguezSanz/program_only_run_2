@@ -1,2 +1,2 @@
 # program_only_run_2
-Adapted PIC18F2580 firmware for the PIC18F26K83 (2) microcontroller for testing CAN bus communications
+This repository contains the adapted firmware of the current PIC18F2580 microcontroller for the new PIC18F26K83 microcontroller used to test the communications prior to the PCB shortcut the CAN bus. The code is mostly disabled just to test sending an acknowledgement message back to the computer for a specific data field of 0x00. The number designator indicates which of the three available PIC18F26K83 with a THD package for testing was used for this test. The experiment was succesful but due to the CAN to USB adapter breaking no more testing could be done.
