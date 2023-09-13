@@ -1,0 +1,1080 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F26K83 ]
+[d frameptr 16353 ]
+"129 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+[e E355 . `uc
+SLAVE_0 0
+]
+"239 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+[e E22871 . `uc
+SLAVE_0 0
+]
+"4 /opt/microchip/xc8/v2.40/pic/sources/c99/common/fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 /opt/microchip/xc8/v2.40/pic/sources/c99/common/float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 /opt/microchip/xc8/v2.40/pic/sources/c99/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 /opt/microchip/xc8/v2.40/pic/sources/c99/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 /opt/microchip/xc8/v2.40/pic/sources/c99/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 /opt/microchip/xc8/v2.40/pic/sources/c99/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 /opt/microchip/xc8/v2.40/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 /opt/microchip/xc8/v2.40/pic/sources/c99/common/sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 /opt/microchip/xc8/v2.40/pic/sources/c99/common/sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 /opt/microchip/xc8/v2.40/pic/sources/c99/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 /opt/microchip/xc8/v2.40/pic/sources/c99/common/Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"93 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+[v _main main `(v  1 e 1 0 ]
+"257
+[v _sendData sendData `(v  1 e 1 0 ]
+"416
+[v _sendAck sendAck `(v  1 e 1 0 ]
+"76 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+[v _RXB0DefaultInterruptHandler RXB0DefaultInterruptHandler `(v  1 s 1 RXB0DefaultInterruptHandler ]
+"77
+[v _RXB1DefaultInterruptHandler RXB1DefaultInterruptHandler `(v  1 s 1 RXB1DefaultInterruptHandler ]
+"78
+[v _TXB0DefaultInterruptHandler TXB0DefaultInterruptHandler `(v  1 s 1 TXB0DefaultInterruptHandler ]
+"79
+[v _TXB1DefaultInterruptHandler TXB1DefaultInterruptHandler `(v  1 s 1 TXB1DefaultInterruptHandler ]
+"80
+[v _TXB2DefaultInterruptHandler TXB2DefaultInterruptHandler `(v  1 s 1 TXB2DefaultInterruptHandler ]
+"81
+[v _RXB0OverflowDefaultHandler RXB0OverflowDefaultHandler `(v  1 s 1 RXB0OverflowDefaultHandler ]
+"82
+[v _RXB1OverflowDefaultHandler RXB1OverflowDefaultHandler `(v  1 s 1 RXB1OverflowDefaultHandler ]
+"83
+[v _BusOffDefaultHandler BusOffDefaultHandler `(v  1 s 1 BusOffDefaultHandler ]
+"84
+[v _TXPassiveDefaultHandler TXPassiveDefaultHandler `(v  1 s 1 TXPassiveDefaultHandler ]
+"85
+[v _RXPassiveDefaultHandler RXPassiveDefaultHandler `(v  1 s 1 RXPassiveDefaultHandler ]
+"86
+[v _TXWarningDefaultHandler TXWarningDefaultHandler `(v  1 s 1 TXWarningDefaultHandler ]
+"87
+[v _RXWarningDefaultHandler RXWarningDefaultHandler `(v  1 s 1 RXWarningDefaultHandler ]
+"88
+[v _WakeUpDefaultInterruptHandler WakeUpDefaultInterruptHandler `(v  1 s 1 WakeUpDefaultInterruptHandler ]
+"89
+[v _MessageErrorDefaultInterruptHandler MessageErrorDefaultInterruptHandler `(v  1 s 1 MessageErrorDefaultInterruptHandler ]
+"91
+[v _ECAN_Initialize ECAN_Initialize `(v  1 e 1 0 ]
+"263
+[v _CAN_transmit CAN_transmit `(uc  1 e 1 0 ]
+"444
+[v _convertCANid2Reg convertCANid2Reg `(v  1 s 1 convertCANid2Reg ]
+"481
+[v _ECAN_SetRXB0InterruptHandler ECAN_SetRXB0InterruptHandler `(v  1 e 1 0 ]
+"486
+[v _ECAN_RXB0I_ISR ECAN_RXB0I_ISR `(v  1 e 1 0 ]
+"492
+[v _ECAN_SetRXB1InterruptHandler ECAN_SetRXB1InterruptHandler `(v  1 e 1 0 ]
+"497
+[v _ECAN_RXB1I_ISR ECAN_RXB1I_ISR `(v  1 e 1 0 ]
+"503
+[v _ECAN_SetTXB0InterruptHandler ECAN_SetTXB0InterruptHandler `(v  1 e 1 0 ]
+"508
+[v _ECAN_TXB0I_ISR ECAN_TXB0I_ISR `(v  1 e 1 0 ]
+"514
+[v _ECAN_SetTXB1InterruptHandler ECAN_SetTXB1InterruptHandler `(v  1 e 1 0 ]
+"519
+[v _ECAN_TXB1I_ISR ECAN_TXB1I_ISR `(v  1 e 1 0 ]
+"525
+[v _ECAN_SetTXB2InterruptHandler ECAN_SetTXB2InterruptHandler `(v  1 e 1 0 ]
+"530
+[v _ECAN_TXB2I_ISR ECAN_TXB2I_ISR `(v  1 e 1 0 ]
+"536
+[v _ECAN_SetRXB0OverflowHandler ECAN_SetRXB0OverflowHandler `(v  1 e 1 0 ]
+"541
+[v _ECAN_SetRXB1OverflowHandler ECAN_SetRXB1OverflowHandler `(v  1 e 1 0 ]
+"546
+[v _ECAN_SetBusOffHandler ECAN_SetBusOffHandler `(v  1 e 1 0 ]
+"551
+[v _ECAN_SetTXPassiveHandler ECAN_SetTXPassiveHandler `(v  1 e 1 0 ]
+"556
+[v _ECAN_SetRXPassiveHandler ECAN_SetRXPassiveHandler `(v  1 e 1 0 ]
+"561
+[v _ECAN_SetTXWarningHandler ECAN_SetTXWarningHandler `(v  1 e 1 0 ]
+"566
+[v _ECAN_SetRXWarningHandler ECAN_SetRXWarningHandler `(v  1 e 1 0 ]
+"571
+[v _ECAN_ERRI_ISR ECAN_ERRI_ISR `(v  1 e 1 0 ]
+"613
+[v _ECAN_SetWakeUpInterruptHandler ECAN_SetWakeUpInterruptHandler `(v  1 e 1 0 ]
+"618
+[v _ECAN_WAKI_ISR ECAN_WAKI_ISR `(v  1 e 1 0 ]
+"624
+[v _ECAN_SetMessageErrorInterruptHandler ECAN_SetMessageErrorInterruptHandler `(v  1 e 1 0 ]
+"629
+[v _ECAN_IRXI_ISR ECAN_IRXI_ISR `(v  1 e 1 0 ]
+"52 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"58
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
+"50 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"60
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"74
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"56 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"74 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+"129
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
+"144
+[v _SPI1_Close SPI1_Close `(v  1 e 1 0 ]
+"149
+[v _SPI1_ExchangeByte SPI1_ExchangeByte `(uc  1 e 1 0 ]
+"157
+[v _SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
+"198
+[v _SPI1_DefaultHandler SPI1_DefaultHandler `(v  1 e 1 0 ]
+"203
+[v _SPI1_SetInterruptHandler SPI1_SetInterruptHandler `(v  1 e 1 0 ]
+"208
+[v _SPI1_DefaultRxHandler SPI1_DefaultRxHandler `(v  1 e 1 0 ]
+"213
+[v _SPI1_SetRxInterruptHandler SPI1_SetRxInterruptHandler `(v  1 e 1 0 ]
+"218
+[v _SPI1_DefaultTxHandler SPI1_DefaultTxHandler `(v  1 e 1 0 ]
+"223
+[v _SPI1_SetTxInterruptHandler SPI1_SetTxInterruptHandler `(v  1 e 1 0 ]
+"75 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.h
+[v _SPI1_InterruptHandler SPI1_InterruptHandler `*.37(v  1 e 2 0 ]
+"77
+[v _SPI1_RxInterruptHandler SPI1_RxInterruptHandler `*.37(v  1 e 2 0 ]
+"79
+[v _SPI1_TxInterruptHandler SPI1_TxInterruptHandler `*.37(v  1 e 2 0 ]
+"270 /home/teo/.mchp_packs/Microchip/PIC18F-K_DFP/1.8.249/xc8/pic/include/proc/pic18f26k83.h
+[v _CIOCON CIOCON `VEuc  1 e 1 @14080 ]
+[s S563 . 1 `uc 1 CLKSEL 1 0 :1:0 
+`uc 1 . 1 0 :6:1 
+`uc 1 TX1SRC 1 0 :1:7 
+]
+"282
+[u S567 . 1 `S563 1 . 1 0 ]
+[v _CIOCONbits CIOCONbits `VES567  1 e 1 @14080 ]
+"437
+[v _BRGCON1 BRGCON1 `VEuc  1 e 1 @14083 ]
+"513
+[v _BRGCON2 BRGCON2 `VEuc  1 e 1 @14084 ]
+"589
+[v _BRGCON3 BRGCON3 `VEuc  1 e 1 @14085 ]
+[s S609 . 1 `uc 1 SEG2PH0 1 0 :1:0 
+`uc 1 SEG2PH1 1 0 :1:1 
+`uc 1 SEG2PH2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 WAKFIL 1 0 :1:6 
+`uc 1 WAKDIS 1 0 :1:7 
+]
+"607
+[s S616 . 1 `uc 1 SEG2PH 1 0 :3:0 
+]
+[u S618 . 1 `S609 1 . 1 0 `S616 1 . 1 0 ]
+[v _BRGCON3bits BRGCON3bits `VES618  1 e 1 @14085 ]
+"4066
+[v _LATA LATA `VEuc  1 e 1 @16314 ]
+"4178
+[v _LATB LATB `VEuc  1 e 1 @16315 ]
+"4290
+[v _LATC LATC `VEuc  1 e 1 @16316 ]
+[s S1357 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"4317
+[s S1366 . 1 `uc 1 LC0 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+`uc 1 LC2 1 0 :1:2 
+`uc 1 LC3 1 0 :1:3 
+`uc 1 LC4 1 0 :1:4 
+`uc 1 LC5 1 0 :1:5 
+`uc 1 LC6 1 0 :1:6 
+`uc 1 LC7 1 0 :1:7 
+]
+[u S1375 . 1 `S1357 1 . 1 0 `S1366 1 . 1 0 ]
+[v _LATCbits LATCbits `VES1375  1 e 1 @16316 ]
+"4402
+[v _TRISA TRISA `VEuc  1 e 1 @16322 ]
+"4464
+[v _TRISB TRISB `VEuc  1 e 1 @16323 ]
+[s S1331 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"4481
+[u S1340 . 1 `S1331 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES1340  1 e 1 @16323 ]
+"4526
+[v _TRISC TRISC `VEuc  1 e 1 @16324 ]
+[s S84 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"4543
+[u S93 . 1 `S84 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES93  1 e 1 @16324 ]
+[s S1296 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"4612
+[s S1305 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+`uc 1 . 1 0 :4:1 
+`uc 1 LVDIN 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 RJPU 1 0 :1:7 
+]
+[u S1311 . 1 `S1296 1 . 1 0 `S1305 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES1311  1 e 1 @16330 ]
+[s S346 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"4888
+[s S354 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S357 . 1 `S346 1 . 1 0 `S354 1 . 1 0 ]
+[v _INTCON0bits INTCON0bits `VES357  1 e 1 @16338 ]
+"13960
+[v _RXF0SIDH RXF0SIDH `VEuc  1 e 1 @14240 ]
+"14080
+[v _RXF0SIDL RXF0SIDL `VEuc  1 e 1 @14241 ]
+"14168
+[v _RXF0EIDH RXF0EIDH `VEuc  1 e 1 @14242 ]
+"14238
+[v _RXF0EIDL RXF0EIDL `VEuc  1 e 1 @14243 ]
+"14308
+[v _RXF1SIDH RXF1SIDH `VEuc  1 e 1 @14244 ]
+"14428
+[v _RXF1SIDL RXF1SIDL `VEuc  1 e 1 @14245 ]
+"14516
+[v _RXF1EIDH RXF1EIDH `VEuc  1 e 1 @14246 ]
+"14586
+[v _RXF1EIDL RXF1EIDL `VEuc  1 e 1 @14247 ]
+"14656
+[v _RXF2SIDH RXF2SIDH `VEuc  1 e 1 @14248 ]
+"14776
+[v _RXF2SIDL RXF2SIDL `VEuc  1 e 1 @14249 ]
+"14864
+[v _RXF2EIDH RXF2EIDH `VEuc  1 e 1 @14250 ]
+"14934
+[v _RXF2EIDL RXF2EIDL `VEuc  1 e 1 @14251 ]
+"15004
+[v _RXF3SIDH RXF3SIDH `VEuc  1 e 1 @14252 ]
+"15124
+[v _RXF3SIDL RXF3SIDL `VEuc  1 e 1 @14253 ]
+"15212
+[v _RXF3EIDH RXF3EIDH `VEuc  1 e 1 @14254 ]
+"15282
+[v _RXF3EIDL RXF3EIDL `VEuc  1 e 1 @14255 ]
+"15352
+[v _RXF4SIDH RXF4SIDH `VEuc  1 e 1 @14256 ]
+"15472
+[v _RXF4SIDL RXF4SIDL `VEuc  1 e 1 @14257 ]
+"15560
+[v _RXF4EIDH RXF4EIDH `VEuc  1 e 1 @14258 ]
+"15630
+[v _RXF4EIDL RXF4EIDL `VEuc  1 e 1 @14259 ]
+"15700
+[v _RXF5SIDH RXF5SIDH `VEuc  1 e 1 @14260 ]
+"15820
+[v _RXF5SIDL RXF5SIDL `VEuc  1 e 1 @14261 ]
+"15908
+[v _RXF5EIDH RXF5EIDH `VEuc  1 e 1 @14262 ]
+"15978
+[v _RXF5EIDL RXF5EIDL `VEuc  1 e 1 @14263 ]
+"16048
+[v _RXM0SIDH RXM0SIDH `VEuc  1 e 1 @14264 ]
+"16168
+[v _RXM0SIDL RXM0SIDL `VEuc  1 e 1 @14265 ]
+"16256
+[v _RXM0EIDH RXM0EIDH `VEuc  1 e 1 @14266 ]
+"16326
+[v _RXM0EIDL RXM0EIDL `VEuc  1 e 1 @14267 ]
+"16396
+[v _RXM1SIDH RXM1SIDH `VEuc  1 e 1 @14268 ]
+"16516
+[v _RXM1SIDL RXM1SIDL `VEuc  1 e 1 @14269 ]
+"16604
+[v _RXM1EIDH RXM1EIDH `VEuc  1 e 1 @14270 ]
+"16674
+[v _RXM1EIDL RXM1EIDL `VEuc  1 e 1 @14271 ]
+[s S772 . 1 `uc 1 TXPRI 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 TXREQ 1 0 :1:3 
+`uc 1 TXERR 1 0 :1:4 
+`uc 1 TXLARB 1 0 :1:5 
+`uc 1 TXABT 1 0 :1:6 
+`uc 1 TXBIF 1 0 :1:7 
+]
+"16764
+[s S780 . 1 `uc 1 TXPRI0 1 0 :1:0 
+`uc 1 TXPRI1 1 0 :1:1 
+]
+[u S783 . 1 `S772 1 . 1 0 `S780 1 . 1 0 ]
+[v _TXB2CONbits TXB2CONbits `VES783  1 e 1 @14272 ]
+"16809
+[v _TXB2SIDH TXB2SIDH `VEuc  1 e 1 @14273 ]
+"16929
+[v _TXB2SIDL TXB2SIDL `VEuc  1 e 1 @14274 ]
+"17017
+[v _TXB2EIDH TXB2EIDH `VEuc  1 e 1 @14275 ]
+"17087
+[v _TXB2EIDL TXB2EIDL `VEuc  1 e 1 @14276 ]
+"17157
+[v _TXB2DLC TXB2DLC `VEuc  1 e 1 @14277 ]
+"17210
+[v _TXB2D0 TXB2D0 `VEuc  1 e 1 @14278 ]
+"17280
+[v _TXB2D1 TXB2D1 `VEuc  1 e 1 @14279 ]
+"17350
+[v _TXB2D2 TXB2D2 `VEuc  1 e 1 @14280 ]
+"17420
+[v _TXB2D3 TXB2D3 `VEuc  1 e 1 @14281 ]
+"17490
+[v _TXB2D4 TXB2D4 `VEuc  1 e 1 @14282 ]
+"17560
+[v _TXB2D5 TXB2D5 `VEuc  1 e 1 @14283 ]
+"17630
+[v _TXB2D6 TXB2D6 `VEuc  1 e 1 @14284 ]
+"17700
+[v _TXB2D7 TXB2D7 `VEuc  1 e 1 @14285 ]
+"18046
+[v _TXB1CONbits TXB1CONbits `VES783  1 e 1 @14288 ]
+"18091
+[v _TXB1SIDH TXB1SIDH `VEuc  1 e 1 @14289 ]
+"18211
+[v _TXB1SIDL TXB1SIDL `VEuc  1 e 1 @14290 ]
+"18299
+[v _TXB1EIDH TXB1EIDH `VEuc  1 e 1 @14291 ]
+"18369
+[v _TXB1EIDL TXB1EIDL `VEuc  1 e 1 @14292 ]
+"18439
+[v _TXB1DLC TXB1DLC `VEuc  1 e 1 @14293 ]
+"18492
+[v _TXB1D0 TXB1D0 `VEuc  1 e 1 @14294 ]
+"18562
+[v _TXB1D1 TXB1D1 `VEuc  1 e 1 @14295 ]
+"18632
+[v _TXB1D2 TXB1D2 `VEuc  1 e 1 @14296 ]
+"18702
+[v _TXB1D3 TXB1D3 `VEuc  1 e 1 @14297 ]
+"18772
+[v _TXB1D4 TXB1D4 `VEuc  1 e 1 @14298 ]
+"18842
+[v _TXB1D5 TXB1D5 `VEuc  1 e 1 @14299 ]
+"18912
+[v _TXB1D6 TXB1D6 `VEuc  1 e 1 @14300 ]
+"18982
+[v _TXB1D7 TXB1D7 `VEuc  1 e 1 @14301 ]
+"19311
+[v _TXB0CONbits TXB0CONbits `VES783  1 e 1 @14304 ]
+"19356
+[v _TXB0SIDH TXB0SIDH `VEuc  1 e 1 @14305 ]
+"19476
+[v _TXB0SIDL TXB0SIDL `VEuc  1 e 1 @14306 ]
+"19564
+[v _TXB0EIDH TXB0EIDH `VEuc  1 e 1 @14307 ]
+"19634
+[v _TXB0EIDL TXB0EIDL `VEuc  1 e 1 @14308 ]
+"19704
+[v _TXB0DLC TXB0DLC `VEuc  1 e 1 @14309 ]
+"19757
+[v _TXB0D0 TXB0D0 `VEuc  1 e 1 @14310 ]
+"19827
+[v _TXB0D1 TXB0D1 `VEuc  1 e 1 @14311 ]
+"19897
+[v _TXB0D2 TXB0D2 `VEuc  1 e 1 @14312 ]
+"19967
+[v _TXB0D3 TXB0D3 `VEuc  1 e 1 @14313 ]
+"20037
+[v _TXB0D4 TXB0D4 `VEuc  1 e 1 @14314 ]
+"20107
+[v _TXB0D5 TXB0D5 `VEuc  1 e 1 @14315 ]
+"20177
+[v _TXB0D6 TXB0D6 `VEuc  1 e 1 @14316 ]
+"20247
+[v _TXB0D7 TXB0D7 `VEuc  1 e 1 @14317 ]
+[s S953 . 1 `uc 1 FILHIT0 1 0 :1:0 
+`uc 1 FILHIT1 1 0 :1:1 
+`uc 1 FILHIT2 1 0 :1:2 
+`uc 1 RXRTRRO_FILHIT3 1 0 :1:3 
+`uc 1 FILHIT4 1 0 :1:4 
+`uc 1 RXM0_RTRRO 1 0 :1:5 
+`uc 1 RXM1 1 0 :1:6 
+`uc 1 RXFUL 1 0 :1:7 
+]
+"20602
+[s S962 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 RXRTRRO 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 RXM0 1 0 :1:5 
+]
+[s S967 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 FILHIT3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 RTRRO 1 0 :1:5 
+]
+[u S972 . 1 `S953 1 . 1 0 `S962 1 . 1 0 `S967 1 . 1 0 ]
+[v _RXB1CONbits RXB1CONbits `VES972  1 e 1 @14320 ]
+[s S105 . 1 `uc 1 DMA1SCNTIE 1 0 :1:0 
+`uc 1 DMA1DCNTIE 1 0 :1:1 
+`uc 1 DMA1ORIE 1 0 :1:2 
+`uc 1 DMA1AIE 1 0 :1:3 
+`uc 1 SPI1RXIE 1 0 :1:4 
+`uc 1 SPI1TXIE 1 0 :1:5 
+`uc 1 SPI1IE 1 0 :1:6 
+`uc 1 I2C1RXIE 1 0 :1:7 
+]
+"25324
+[s S114 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 CMIE 1 0 :1:6 
+]
+[u S117 . 1 `S105 1 . 1 0 `S114 1 . 1 0 ]
+[v _PIE2bits PIE2bits `VES117  1 e 1 @14738 ]
+[s S404 . 1 `uc 1 RXB0IE 1 0 :1:0 
+`uc 1 RXB1IE 1 0 :1:1 
+`uc 1 TXB0IE 1 0 :1:2 
+`uc 1 TXB1IE 1 0 :1:3 
+`uc 1 TXB2IE 1 0 :1:4 
+`uc 1 ERRIE 1 0 :1:5 
+`uc 1 WAKIE 1 0 :1:6 
+`uc 1 IRXIE 1 0 :1:7 
+]
+"25572
+[s S413 . 1 `uc 1 FIFOFIE 1 0 :1:0 
+`uc 1 RXBnIE 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 TXBnIE 1 0 :1:4 
+]
+[s S418 . 1 `uc 1 FIFOWMIE 1 0 :1:0 
+]
+[u S420 . 1 `S404 1 . 1 0 `S413 1 . 1 0 `S418 1 . 1 0 ]
+[v _PIE5bits PIE5bits `VES420  1 e 1 @14741 ]
+[s S195 . 1 `uc 1 DMA1SCNTIF 1 0 :1:0 
+`uc 1 DMA1DCNTIF 1 0 :1:1 
+`uc 1 DMA1ORIF 1 0 :1:2 
+`uc 1 DMA1AIF 1 0 :1:3 
+`uc 1 SPI1RXIF 1 0 :1:4 
+`uc 1 SPI1TXIF 1 0 :1:5 
+`uc 1 SPI1IF 1 0 :1:6 
+`uc 1 I2C1RXIF 1 0 :1:7 
+]
+"26055
+[s S204 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 CMIF 1 0 :1:6 
+]
+[u S207 . 1 `S195 1 . 1 0 `S204 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES207  1 e 1 @14754 ]
+[s S441 . 1 `uc 1 RXB0IF 1 0 :1:0 
+`uc 1 RXB1IF 1 0 :1:1 
+`uc 1 TXB0IF 1 0 :1:2 
+`uc 1 TXB1IF 1 0 :1:3 
+`uc 1 TXB2IF 1 0 :1:4 
+`uc 1 ERRIF 1 0 :1:5 
+`uc 1 WAKIF 1 0 :1:6 
+`uc 1 IRXIF 1 0 :1:7 
+]
+"26271
+[s S450 . 1 `uc 1 FIFOFIF 1 0 :1:0 
+`uc 1 RXBnIF 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 TXBnIF 1 0 :1:4 
+]
+[s S455 . 1 `uc 1 FIFOWMIF 1 0 :1:0 
+]
+[u S457 . 1 `S441 1 . 1 0 `S450 1 . 1 0 `S455 1 . 1 0 ]
+[v _PIR5bits PIR5bits `VES457  1 e 1 @14757 ]
+"26578
+[v _PMD0 PMD0 `VEuc  1 e 1 @14784 ]
+"26655
+[v _PMD1 PMD1 `VEuc  1 e 1 @14785 ]
+"26725
+[v _PMD2 PMD2 `VEuc  1 e 1 @14786 ]
+"26770
+[v _PMD3 PMD3 `VEuc  1 e 1 @14787 ]
+"26832
+[v _PMD4 PMD4 `VEuc  1 e 1 @14788 ]
+"26865
+[v _PMD5 PMD5 `VEuc  1 e 1 @14789 ]
+"26910
+[v _PMD6 PMD6 `VEuc  1 e 1 @14790 ]
+"26966
+[v _PMD7 PMD7 `VEuc  1 e 1 @14791 ]
+"27112
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @14809 ]
+"27252
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @14811 ]
+"27404
+[v _OSCEN OSCEN `VEuc  1 e 1 @14813 ]
+"27455
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @14814 ]
+"27559
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @14815 ]
+"28921
+[v _RB2PPS RB2PPS `VEuc  1 e 1 @14858 ]
+"29471
+[v _RC5PPS RC5PPS `VEuc  1 e 1 @14869 ]
+"29621
+[v _ANSELA ANSELA `VEuc  1 e 1 @14912 ]
+"29683
+[v _WPUA WPUA `VEuc  1 e 1 @14913 ]
+"29745
+[v _ODCONA ODCONA `VEuc  1 e 1 @14914 ]
+"29807
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @14915 ]
+"29869
+[v _INLVLA INLVLA `VEuc  1 e 1 @14916 ]
+"30117
+[v _ANSELB ANSELB `VEuc  1 e 1 @14928 ]
+"30179
+[v _WPUB WPUB `VEuc  1 e 1 @14929 ]
+"30241
+[v _ODCONB ODCONB `VEuc  1 e 1 @14930 ]
+"30303
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @14931 ]
+"30365
+[v _INLVLB INLVLB `VEuc  1 e 1 @14932 ]
+"30829
+[v _ANSELC ANSELC `VEuc  1 e 1 @14944 ]
+"30891
+[v _WPUC WPUC `VEuc  1 e 1 @14945 ]
+"30953
+[v _ODCONC ODCONC `VEuc  1 e 1 @14946 ]
+"31015
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @14947 ]
+"31077
+[v _INLVLC INLVLC `VEuc  1 e 1 @14948 ]
+"31541
+[v _WPUE WPUE `VEuc  1 e 1 @14977 ]
+"31562
+[v _INLVLE INLVLE `VEuc  1 e 1 @14980 ]
+"32306
+[v _SPI1SCKPPS SPI1SCKPPS `VEuc  1 e 1 @15072 ]
+"32326
+[v _SPI1SDIPPS SPI1SDIPPS `VEuc  1 e 1 @15073 ]
+"32346
+[v _SPI1SSPPS SPI1SSPPS `VEuc  1 e 1 @15074 ]
+"32526
+[v _CANRXPPS CANRXPPS `VEuc  1 e 1 @15085 ]
+"43088
+[v _SPI1RXB SPI1RXB `VEuc  1 e 1 @15632 ]
+"43158
+[v _SPI1TXB SPI1TXB `VEuc  1 e 1 @15633 ]
+"43235
+[v _SPI1TCNTL SPI1TCNTL `VEuc  1 e 1 @15634 ]
+"43275
+[v _SPI1CON0 SPI1CON0 `VEuc  1 e 1 @15636 ]
+[s S165 . 1 `uc 1 BMODE 1 0 :1:0 
+`uc 1 MST 1 0 :1:1 
+`uc 1 LSBF 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 EN 1 0 :1:7 
+]
+"43296
+[s S171 . 1 `uc 1 SPI1BMODE 1 0 :1:0 
+`uc 1 SPI1MST 1 0 :1:1 
+`uc 1 SPI1LSBF 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 SPI1SPIEN 1 0 :1:7 
+]
+"43296
+[u S177 . 1 `S165 1 . 1 0 `S171 1 . 1 0 ]
+"43296
+"43296
+[v _SPI1CON0bits SPI1CON0bits `VES177  1 e 1 @15636 ]
+"43341
+[v _SPI1CON1 SPI1CON1 `VEuc  1 e 1 @15637 ]
+"43443
+[v _SPI1CON2 SPI1CON2 `VEuc  1 e 1 @15638 ]
+"43643
+[v _SPI1BAUD SPI1BAUD `VEuc  1 e 1 @15641 ]
+"43897
+[v _SPI1CLK SPI1CLK `VEuc  1 e 1 @15644 ]
+[s S899 . 1 `uc 1 FILHIT0 1 0 :1:0 
+`uc 1 JTOFF_FILHIT1 1 0 :1:1 
+`uc 1 RB0DBEN_FILHIT2 1 0 :1:2 
+`uc 1 RXRTRRO_FILHIT3 1 0 :1:3 
+`uc 1 FILHIT4 1 0 :1:4 
+`uc 1 RXM0_RTRRO 1 0 :1:5 
+`uc 1 RXM1 1 0 :1:6 
+`uc 1 RXFUL 1 0 :1:7 
+]
+"62997
+[s S908 . 1 `uc 1 FILHIT 1 0 :5:0 
+`uc 1 RTRRO 1 0 :1:5 
+]
+"62997
+[s S911 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 FILHIT1 1 0 :1:1 
+`uc 1 FILHIT2 1 0 :1:2 
+`uc 1 FILHIT3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 RXM0 1 0 :1:5 
+]
+"62997
+[s S918 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 JTOFF 1 0 :1:1 
+`uc 1 RB0DBEN 1 0 :1:2 
+`uc 1 RXRTRRO 1 0 :1:3 
+]
+"62997
+[u S923 . 1 `S899 1 . 1 0 `S908 1 . 1 0 `S911 1 . 1 0 `S918 1 . 1 0 ]
+"62997
+"62997
+[v _RXB0CONbits RXB0CONbits `VES923  1 e 1 @16256 ]
+"64114
+[v _CANSTAT CANSTAT `VEuc  1 e 1 @16270 ]
+"64242
+[v _CANCON CANCON `VEuc  1 e 1 @16271 ]
+[s S996 . 1 `uc 1 EWARN 1 0 :1:0 
+`uc 1 RXWARN 1 0 :1:1 
+`uc 1 TXWARN 1 0 :1:2 
+`uc 1 RXBP 1 0 :1:3 
+`uc 1 TXBP 1 0 :1:4 
+`uc 1 TXBO 1 0 :1:5 
+`uc 1 RXB1OVFL 1 0 :1:6 
+`uc 1 RXB0OVFL 1 0 :1:7 
+]
+"64400
+[s S1005 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_FIFOEMPTY 1 0 :1:7 
+]
+"64400
+[s S1008 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 nFIFOEMPTY 1 0 :1:7 
+]
+"64400
+[s S1011 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RXBNOVFL 1 0 :1:6 
+`uc 1 FIFOEMPTY 1 0 :1:7 
+]
+"64400
+[u S1015 . 1 `S996 1 . 1 0 `S1005 1 . 1 0 `S1008 1 . 1 0 `S1011 1 . 1 0 ]
+"64400
+"64400
+[v _COMSTATbits COMSTATbits `VES1015  1 e 1 @16272 ]
+"64465
+[v _ECANCON ECANCON `VEuc  1 e 1 @16273 ]
+"70 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+[v _pushFlag pushFlag `i  1 e 2 0 ]
+"76
+[v _x x `uc  1 e 1 0 ]
+"77
+[v _delay delay `uc  1 e 1 0 ]
+[s S757 . 14 `uc 1 idType 1 0 `ul 1 id 4 1 `uc 1 dlc 1 5 `uc 1 data0 1 6 `uc 1 data1 1 7 `uc 1 data2 1 8 `uc 1 data3 1 9 `uc 1 data4 1 10 `uc 1 data5 1 11 `uc 1 data6 1 12 `uc 1 data7 1 13 ]
+"78
+[u S769 . 14 `S757 1 frame 14 0 `[14]uc 1 array 14 0 ]
+[v _ReceiveMsg ReceiveMsg `S769  1 e 14 0 ]
+"82
+[v _data_TX data_TX `uc  1 e 1 0 ]
+"54 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+[v _RXB0InterruptHandler RXB0InterruptHandler `*.37(v  1 s 2 RXB0InterruptHandler ]
+"55
+[v _RXB1InterruptHandler RXB1InterruptHandler `*.37(v  1 s 2 RXB1InterruptHandler ]
+"56
+[v _TXB0InterruptHandler TXB0InterruptHandler `*.37(v  1 s 2 TXB0InterruptHandler ]
+"57
+[v _TXB1InterruptHandler TXB1InterruptHandler `*.37(v  1 s 2 TXB1InterruptHandler ]
+"58
+[v _TXB2InterruptHandler TXB2InterruptHandler `*.37(v  1 s 2 TXB2InterruptHandler ]
+"59
+[v _RXB0OverflowHandler RXB0OverflowHandler `*.37(v  1 s 2 RXB0OverflowHandler ]
+"60
+[v _RXB1OverflowHandler RXB1OverflowHandler `*.37(v  1 s 2 RXB1OverflowHandler ]
+"61
+[v _BusOffHandler BusOffHandler `*.37(v  1 s 2 BusOffHandler ]
+"62
+[v _TXPassiveHandler TXPassiveHandler `*.37(v  1 s 2 TXPassiveHandler ]
+"63
+[v _RXPassiveHandler RXPassiveHandler `*.37(v  1 s 2 RXPassiveHandler ]
+"64
+[v _TXWarningHandler TXWarningHandler `*.37(v  1 s 2 TXWarningHandler ]
+"65
+[v _RXWarningHandler RXWarningHandler `*.37(v  1 s 2 RXWarningHandler ]
+"66
+[v _WakeUpInterruptHandler WakeUpInterruptHandler `*.37(v  1 s 2 WakeUpInterruptHandler ]
+"67
+[v _MessageErrorInterruptHandler MessageErrorInterruptHandler `*.37(v  1 s 2 MessageErrorInterruptHandler ]
+[s S73 . 5 `uc 1 con0 1 0 `uc 1 con1 1 1 `uc 1 con2 1 2 `uc 1 baud 1 3 `uc 1 operation 1 4 ]
+"65 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+[v _spi1_configuration spi1_configuration `C[1]S73  1 s 5 spi1_configuration ]
+"93 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"255
+} 0
+"257
+[v _sendData sendData `(v  1 e 1 0 ]
+{
+[s S757 . 14 `uc 1 idType 1 0 `ul 1 id 4 1 `uc 1 dlc 1 5 `uc 1 data0 1 6 `uc 1 data1 1 7 `uc 1 data2 1 8 `uc 1 data3 1 9 `uc 1 data4 1 10 `uc 1 data5 1 11 `uc 1 data6 1 12 `uc 1 data7 1 13 ]
+"398
+[u S769 . 14 `S757 1 frame 14 0 `[14]uc 1 array 14 0 ]
+[v sendData@SendMsg SendMsg `S769  1 a 14 37 ]
+"260
+[v sendData@data_TX data_TX `[4]uc  1 a 4 33 ]
+"257
+[v sendData@op op `ui  1 p 2 27 ]
+"414
+} 0
+"129 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
+{
+[v SPI1_Open@spi1UniqueConfiguration spi1UniqueConfiguration `E355  1 a 1 wreg ]
+[v SPI1_Open@spi1UniqueConfiguration spi1UniqueConfiguration `E355  1 a 1 wreg ]
+"131
+[v SPI1_Open@spi1UniqueConfiguration spi1UniqueConfiguration `E355  1 a 1 3 ]
+"142
+} 0
+"157
+[v _SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
+{
+"159
+[v SPI1_ExchangeBlock@data data `*.39uc  1 a 2 6 ]
+"157
+[v SPI1_ExchangeBlock@block block `*.39v  1 p 2 2 ]
+[v SPI1_ExchangeBlock@blockSize blockSize `ui  1 p 2 4 ]
+"167
+} 0
+"144
+[v _SPI1_Close SPI1_Close `(v  1 e 1 0 ]
+{
+"147
+} 0
+"416 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+[v _sendAck sendAck `(v  1 e 1 0 ]
+{
+[s S757 . 14 `uc 1 idType 1 0 `ul 1 id 4 1 `uc 1 dlc 1 5 `uc 1 data0 1 6 `uc 1 data1 1 7 `uc 1 data2 1 8 `uc 1 data3 1 9 `uc 1 data4 1 10 `uc 1 data5 1 11 `uc 1 data6 1 12 `uc 1 data7 1 13 ]
+"419
+[u S769 . 14 `S757 1 frame 14 0 `[14]uc 1 array 14 0 ]
+[v sendAck@AckMsg AckMsg `S769  1 a 14 33 ]
+"416
+[v sendAck@op op `ui  1 p 2 27 ]
+"449
+} 0
+"263 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+[v _CAN_transmit CAN_transmit `(uc  1 e 1 0 ]
+{
+"267
+[v CAN_transmit@tempSIDL tempSIDL `uc  1 a 1 26 ]
+"266
+[v CAN_transmit@tempSIDH tempSIDH `uc  1 a 1 25 ]
+"265
+[v CAN_transmit@tempEIDL tempEIDL `uc  1 a 1 24 ]
+"264
+[v CAN_transmit@tempEIDH tempEIDH `uc  1 a 1 23 ]
+"269
+[v CAN_transmit@returnValue returnValue `uc  1 a 1 22 ]
+[s S757 . 14 `uc 1 idType 1 0 `ul 1 id 4 1 `uc 1 dlc 1 5 `uc 1 data0 1 6 `uc 1 data1 1 7 `uc 1 data2 1 8 `uc 1 data3 1 9 `uc 1 data4 1 10 `uc 1 data5 1 11 `uc 1 data6 1 12 `uc 1 data7 1 13 ]
+"263
+[u S769 . 14 `S757 1 frame 14 0 `[14]uc 1 array 14 0 ]
+[v CAN_transmit@tempCanMsg tempCanMsg `*.39S769  1 p 2 20 ]
+"345
+} 0
+"444
+[v _convertCANid2Reg convertCANid2Reg `(v  1 s 1 convertCANid2Reg ]
+{
+"446
+[v convertCANid2Reg@wipSIDL wipSIDL `uc  1 a 1 19 ]
+"444
+[v convertCANid2Reg@tempPassedInID tempPassedInID `ul  1 p 4 2 ]
+[v convertCANid2Reg@canIdType canIdType `uc  1 p 1 6 ]
+[v convertCANid2Reg@passedInEIDH passedInEIDH `*.39uc  1 p 2 7 ]
+[v convertCANid2Reg@passedInEIDL passedInEIDL `*.39uc  1 p 2 9 ]
+[v convertCANid2Reg@passedInSIDH passedInSIDH `*.39uc  1 p 2 11 ]
+[v convertCANid2Reg@passedInSIDL passedInSIDL `*.39uc  1 p 2 13 ]
+"479
+} 0
+"50 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"58
+} 0
+"74 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+{
+"127
+} 0
+"223
+[v _SPI1_SetTxInterruptHandler SPI1_SetTxInterruptHandler `(v  1 e 1 0 ]
+{
+[v SPI1_SetTxInterruptHandler@handler handler `*.37(v  1 p 2 2 ]
+"226
+} 0
+"213
+[v _SPI1_SetRxInterruptHandler SPI1_SetRxInterruptHandler `(v  1 e 1 0 ]
+{
+[v SPI1_SetRxInterruptHandler@handler handler `*.37(v  1 p 2 2 ]
+"216
+} 0
+"203
+[v _SPI1_SetInterruptHandler SPI1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v SPI1_SetInterruptHandler@handler handler `*.37(v  1 p 2 2 ]
+"206
+} 0
+"74 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"92
+} 0
+"56 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"129
+} 0
+"60 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"52 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"56
+} 0
+"91 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+[v _ECAN_Initialize ECAN_Initialize `(v  1 e 1 0 ]
+{
+"250
+} 0
+"613
+[v _ECAN_SetWakeUpInterruptHandler ECAN_SetWakeUpInterruptHandler `(v  1 e 1 0 ]
+{
+[v ECAN_SetWakeUpInterruptHandler@handler handler `*.37(v  1 p 2 2 ]
+"616
+} 0
+"561
+[v _ECAN_SetTXWarningHandler ECAN_SetTXWarningHandler `(v  1 e 1 0 ]
+{
+[v ECAN_SetTXWarningHandler@handler handler `*.37(v  1 p 2 2 ]
+"564
+} 0
+"551
+[v _ECAN_SetTXPassiveHandler ECAN_SetTXPassiveHandler `(v  1 e 1 0 ]
+{
+[v ECAN_SetTXPassiveHandler@handler handler `*.37(v  1 p 2 2 ]
+"554
+} 0
+"525
+[v _ECAN_SetTXB2InterruptHandler ECAN_SetTXB2InterruptHandler `(v  1 e 1 0 ]
+{
+[v ECAN_SetTXB2InterruptHandler@handler handler `*.37(v  1 p 2 2 ]
+"528
+} 0
+"514
+[v _ECAN_SetTXB1InterruptHandler ECAN_SetTXB1InterruptHandler `(v  1 e 1 0 ]
+{
+[v ECAN_SetTXB1InterruptHandler@handler handler `*.37(v  1 p 2 2 ]
+"517
+} 0
+"503
+[v _ECAN_SetTXB0InterruptHandler ECAN_SetTXB0InterruptHandler `(v  1 e 1 0 ]
+{
+[v ECAN_SetTXB0InterruptHandler@handler handler `*.37(v  1 p 2 2 ]
+"506
+} 0
+"566
+[v _ECAN_SetRXWarningHandler ECAN_SetRXWarningHandler `(v  1 e 1 0 ]
+{
+[v ECAN_SetRXWarningHandler@handler handler `*.37(v  1 p 2 2 ]
+"569
+} 0
+"556
+[v _ECAN_SetRXPassiveHandler ECAN_SetRXPassiveHandler `(v  1 e 1 0 ]
+{
+[v ECAN_SetRXPassiveHandler@handler handler `*.37(v  1 p 2 2 ]
+"559
+} 0
+"541
+[v _ECAN_SetRXB1OverflowHandler ECAN_SetRXB1OverflowHandler `(v  1 e 1 0 ]
+{
+[v ECAN_SetRXB1OverflowHandler@handler handler `*.37(v  1 p 2 2 ]
+"544
+} 0
+"492
+[v _ECAN_SetRXB1InterruptHandler ECAN_SetRXB1InterruptHandler `(v  1 e 1 0 ]
+{
+[v ECAN_SetRXB1InterruptHandler@handler handler `*.37(v  1 p 2 2 ]
+"495
+} 0
+"536
+[v _ECAN_SetRXB0OverflowHandler ECAN_SetRXB0OverflowHandler `(v  1 e 1 0 ]
+{
+[v ECAN_SetRXB0OverflowHandler@handler handler `*.37(v  1 p 2 2 ]
+"539
+} 0
+"481
+[v _ECAN_SetRXB0InterruptHandler ECAN_SetRXB0InterruptHandler `(v  1 e 1 0 ]
+{
+[v ECAN_SetRXB0InterruptHandler@handler handler `*.37(v  1 p 2 2 ]
+"484
+} 0
+"624
+[v _ECAN_SetMessageErrorInterruptHandler ECAN_SetMessageErrorInterruptHandler `(v  1 e 1 0 ]
+{
+[v ECAN_SetMessageErrorInterruptHandler@handler handler `*.37(v  1 p 2 2 ]
+"627
+} 0
+"546
+[v _ECAN_SetBusOffHandler ECAN_SetBusOffHandler `(v  1 e 1 0 ]
+{
+[v ECAN_SetBusOffHandler@handler handler `*.37(v  1 p 2 2 ]
+"549
+} 0
+"58 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
+{
+"109
+} 0
+"218 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+[v _SPI1_DefaultTxHandler SPI1_DefaultTxHandler `(v  1 e 1 0 ]
+{
+"221
+} 0
+"208
+[v _SPI1_DefaultRxHandler SPI1_DefaultRxHandler `(v  1 e 1 0 ]
+{
+"211
+} 0
+"198
+[v _SPI1_DefaultHandler SPI1_DefaultHandler `(v  1 e 1 0 ]
+{
+"201
+} 0
+"618 /home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+[v _ECAN_WAKI_ISR ECAN_WAKI_ISR `(v  1 e 1 0 ]
+{
+"622
+} 0
+"88
+[v _WakeUpDefaultInterruptHandler WakeUpDefaultInterruptHandler `(v  1 s 1 WakeUpDefaultInterruptHandler ]
+{
+} 0
+"530
+[v _ECAN_TXB2I_ISR ECAN_TXB2I_ISR `(v  1 e 1 0 ]
+{
+"534
+} 0
+"80
+[v _TXB2DefaultInterruptHandler TXB2DefaultInterruptHandler `(v  1 s 1 TXB2DefaultInterruptHandler ]
+{
+} 0
+"519
+[v _ECAN_TXB1I_ISR ECAN_TXB1I_ISR `(v  1 e 1 0 ]
+{
+"523
+} 0
+"79
+[v _TXB1DefaultInterruptHandler TXB1DefaultInterruptHandler `(v  1 s 1 TXB1DefaultInterruptHandler ]
+{
+} 0
+"508
+[v _ECAN_TXB0I_ISR ECAN_TXB0I_ISR `(v  1 e 1 0 ]
+{
+"512
+} 0
+"78
+[v _TXB0DefaultInterruptHandler TXB0DefaultInterruptHandler `(v  1 s 1 TXB0DefaultInterruptHandler ]
+{
+} 0
+"497
+[v _ECAN_RXB1I_ISR ECAN_RXB1I_ISR `(v  1 e 1 0 ]
+{
+"501
+} 0
+"77
+[v _RXB1DefaultInterruptHandler RXB1DefaultInterruptHandler `(v  1 s 1 RXB1DefaultInterruptHandler ]
+{
+} 0
+"486
+[v _ECAN_RXB0I_ISR ECAN_RXB0I_ISR `(v  1 e 1 0 ]
+{
+"490
+} 0
+"76
+[v _RXB0DefaultInterruptHandler RXB0DefaultInterruptHandler `(v  1 s 1 RXB0DefaultInterruptHandler ]
+{
+} 0
+"629
+[v _ECAN_IRXI_ISR ECAN_IRXI_ISR `(v  1 e 1 0 ]
+{
+"633
+} 0
+"89
+[v _MessageErrorDefaultInterruptHandler MessageErrorDefaultInterruptHandler `(v  1 s 1 MessageErrorDefaultInterruptHandler ]
+{
+} 0
+"571
+[v _ECAN_ERRI_ISR ECAN_ERRI_ISR `(v  1 e 1 0 ]
+{
+"611
+} 0
+"86
+[v _TXWarningDefaultHandler TXWarningDefaultHandler `(v  1 s 1 TXWarningDefaultHandler ]
+{
+} 0
+"84
+[v _TXPassiveDefaultHandler TXPassiveDefaultHandler `(v  1 s 1 TXPassiveDefaultHandler ]
+{
+} 0
+"87
+[v _RXWarningDefaultHandler RXWarningDefaultHandler `(v  1 s 1 RXWarningDefaultHandler ]
+{
+} 0
+"85
+[v _RXPassiveDefaultHandler RXPassiveDefaultHandler `(v  1 s 1 RXPassiveDefaultHandler ]
+{
+} 0
+"82
+[v _RXB1OverflowDefaultHandler RXB1OverflowDefaultHandler `(v  1 s 1 RXB1OverflowDefaultHandler ]
+{
+} 0
+"81
+[v _RXB0OverflowDefaultHandler RXB0OverflowDefaultHandler `(v  1 s 1 RXB0OverflowDefaultHandler ]
+{
+} 0
+"83
+[v _BusOffDefaultHandler BusOffDefaultHandler `(v  1 s 1 BusOffDefaultHandler ]
+{
+} 0

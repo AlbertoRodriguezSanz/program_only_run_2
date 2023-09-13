@@ -1,0 +1,1409 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$/tmp/xcXkegogD.o
+idloc IDLOC 5 200000 200000 10 1 1
+init CODE 0 FFFC FFFC 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 A 1 1
+$dist/default/production/2_Program_Only_Run_Mode.production.o
+ivt0x8 CODE 0 1F9E 1F9E 12 1 2
+cinit CODE 0 1E38 1E38 3E 1 2
+idloc IDLOC 5 200000 200000 10 1 1
+text0 CODE 0 189A 189A 186 1 2
+text1 CODE 0 1C10 1C10 92 1 2
+text2 CODE 0 1B34 1B34 DC 1 2
+text3 CODE 0 1D8E 1D8E 64 1 2
+text4 CODE 0 2062 2062 6 1 2
+text5 CODE 0 1CA2 1CA2 80 1 2
+text6 CODE 0 100C 100C 360 1 2
+text7 CODE 0 1702 1702 198 1 2
+text8 CODE 0 1F6C 1F6C 1A 1 2
+text9 CODE 0 1DF2 1DF2 46 1 2
+text10 CODE 0 1FB0 1FB0 A 1 2
+text11 CODE 0 1FBA 1FBA A 1 2
+text12 CODE 0 1FC4 1FC4 A 1 2
+text13 CODE 0 1E76 1E76 24 1 2
+text14 CODE 0 1D22 1D22 6C 1 2
+text15 CODE 0 1F86 1F86 18 1 2
+text16 CODE 0 2068 2068 4 1 2
+text17 CODE 0 1556 1556 1AC 1 2
+text18 CODE 0 1FCE 1FCE A 1 2
+text19 CODE 0 1FD8 1FD8 A 1 2
+text20 CODE 0 1FE2 1FE2 A 1 2
+text21 CODE 0 1FEC 1FEC A 1 2
+text22 CODE 0 1FF6 1FF6 A 1 2
+text23 CODE 0 2000 2000 A 1 2
+text24 CODE 0 200A 200A A 1 2
+text25 CODE 0 2014 2014 A 1 2
+text26 CODE 0 201E 201E A 1 2
+text27 CODE 0 2028 2028 A 1 2
+text28 CODE 0 2032 2032 A 1 2
+text29 CODE 0 203C 203C A 1 2
+text30 CODE 0 2046 2046 A 1 2
+text31 CODE 0 2050 2050 A 1 2
+text32 CODE 0 136C 136C 1EA 1 2
+text33 CODE 0 206C 206C 2 1 2
+text34 CODE 0 205A 205A 8 1 2
+text35 CODE 0 206E 206E 2 1 2
+text36 CODE 0 1E9A 1E9A 1E 1 2
+text37 CODE 0 2070 2070 2 1 2
+text38 CODE 0 1EB8 1EB8 1E 1 2
+text39 CODE 0 2072 2072 2 1 2
+text40 CODE 0 1ED6 1ED6 1E 1 2
+text41 CODE 0 2074 2074 2 1 2
+text42 CODE 0 1EF4 1EF4 1E 1 2
+text43 CODE 0 2076 2076 2 1 2
+text44 CODE 0 1F12 1F12 1E 1 2
+text45 CODE 0 2078 2078 2 1 2
+text46 CODE 0 1F30 1F30 1E 1 2
+text47 CODE 0 207A 207A 2 1 2
+text48 CODE 0 1F4E 1F4E 1E 1 2
+text49 CODE 0 207C 207C 2 1 2
+text50 CODE 0 1A20 1A20 114 1 2
+text51 CODE 0 207E 207E 2 1 2
+text52 CODE 0 2080 2080 2 1 2
+text53 CODE 0 2082 2082 2 1 2
+text54 CODE 0 2084 2084 2 1 2
+text55 CODE 0 2086 2086 2 1 2
+text56 CODE 0 2088 2088 2 1 2
+text57 CODE 0 208A 208A 2 1 2
+nvBANK0 BANK0 1 7A 7A 6 1 1
+idataCOMRAM CODE 0 208C 208C 1 1 1
+cstackCOMRAM COMRAM 1 1 1 33 1 1
+cstackBANK0 BANK0 1 80 80 2 1 1
+bssBANK0 BANK0 1 60 60 1A 1 1
+smallconst SMALLCONST 0 1000 1000 C 1 2
+dataCOMRAM COMRAM 1 5C 5C 1 1 1
+bssCOMRAM COMRAM 1 34 34 28 1 1
+config CONFIG 4 300000 300000 A 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 82-FFF 1
+SFR 3700-3FFF 1
+BANK0 82-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-FFF 1
+CONST 208D-FFFB 1
+SMALLCONST 208D-FFFB 1
+CODE 4-FFF 1
+CODE 208D-FFFB 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-FFF 1
+BIGRAM 5D-5F 1
+BIGRAM 82-FFF 1
+BIGSFR 3700-3FFF 1
+COMRAM 5D-5F 1
+EEDATA 310000-3103FF 1
+MEDIUMCONST 208D-FFFB 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production/2_Program_Only_Run_Mode.production.o
+208A text57 CODE >83:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2088 text56 CODE >81:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2086 text55 CODE >82:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2084 text54 CODE >85:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2082 text53 CODE >87:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2080 text52 CODE >84:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+207E text51 CODE >86:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1A20 text50 CODE >571:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1A20 text50 CODE >573:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1A2E text50 CODE >575:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1A46 text50 CODE >576:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1A48 text50 CODE >579:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1A56 text50 CODE >581:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1A6E text50 CODE >582:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1A70 text50 CODE >585:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1A7E text50 CODE >587:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1A96 text50 CODE >590:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1AA4 text50 CODE >592:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1ABC text50 CODE >595:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1ACA text50 CODE >597:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1AE2 text50 CODE >600:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1AF0 text50 CODE >602:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1B08 text50 CODE >605:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1B16 text50 CODE >607:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1B2E text50 CODE >610:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1B32 text50 CODE >611:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+207C text49 CODE >89:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1F4E text48 CODE >629:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1F4E text48 CODE >631:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1F66 text48 CODE >632:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1F6A text48 CODE >633:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+207A text47 CODE >76:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1F30 text46 CODE >486:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1F30 text46 CODE >488:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1F48 text46 CODE >489:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1F4C text46 CODE >490:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2078 text45 CODE >77:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1F12 text44 CODE >497:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1F12 text44 CODE >499:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1F2A text44 CODE >500:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1F2E text44 CODE >501:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2076 text43 CODE >78:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1EF4 text42 CODE >508:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1EF4 text42 CODE >510:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1F0C text42 CODE >511:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1F10 text42 CODE >512:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2074 text41 CODE >79:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1ED6 text40 CODE >519:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1ED6 text40 CODE >521:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1EEE text40 CODE >522:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1EF2 text40 CODE >523:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2072 text39 CODE >80:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1EB8 text38 CODE >530:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1EB8 text38 CODE >532:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1ED0 text38 CODE >533:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1ED4 text38 CODE >534:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2070 text37 CODE >88:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1E9A text36 CODE >618:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1E9A text36 CODE >620:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1EB2 text36 CODE >621:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1EB6 text36 CODE >622:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+206E text35 CODE >198:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+206E text35 CODE >201:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+205A text34 CODE >208:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+205A text34 CODE >210:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+2060 text34 CODE >211:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+206C text33 CODE >218:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+206C text33 CODE >221:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+136C text32 CODE >58:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1378 text32 CODE >61:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1396 text32 CODE >63:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+13B0 text32 CODE >64:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+13B4 text32 CODE >65:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+13D0 text32 CODE >67:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+13EA text32 CODE >68:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+13EE text32 CODE >69:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+140A text32 CODE >71:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1424 text32 CODE >72:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1428 text32 CODE >73:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1444 text32 CODE >75:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1448 text32 CODE >76:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+144C text32 CODE >77:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1468 text32 CODE >79:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+146C text32 CODE >80:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1470 text32 CODE >81:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+148C text32 CODE >83:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1490 text32 CODE >84:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1494 text32 CODE >85:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+14B0 text32 CODE >87:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+14B4 text32 CODE >88:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+14B8 text32 CODE >89:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+14D4 text32 CODE >91:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+14D8 text32 CODE >92:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+14DC text32 CODE >93:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+14F8 text32 CODE >95:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+14FC text32 CODE >96:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1500 text32 CODE >97:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+151C text32 CODE >99:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1520 text32 CODE >100:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1524 text32 CODE >101:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1540 text32 CODE >103:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1544 text32 CODE >104:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1548 text32 CODE >108:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1548 text32 CODE >109:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+2050 text31 CODE >546:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2050 text31 CODE >548:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2058 text31 CODE >549:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2046 text30 CODE >624:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2046 text30 CODE >626:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+204E text30 CODE >627:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+203C text29 CODE >481:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+203C text29 CODE >483:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2044 text29 CODE >484:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2032 text28 CODE >536:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2032 text28 CODE >538:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+203A text28 CODE >539:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2028 text27 CODE >492:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2028 text27 CODE >494:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2030 text27 CODE >495:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+201E text26 CODE >541:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+201E text26 CODE >543:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2026 text26 CODE >544:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2014 text25 CODE >556:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2014 text25 CODE >558:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+201C text25 CODE >559:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+200A text24 CODE >566:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+200A text24 CODE >568:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2012 text24 CODE >569:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2000 text23 CODE >503:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2000 text23 CODE >505:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2008 text23 CODE >506:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FF6 text22 CODE >514:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FF6 text22 CODE >516:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FFE text22 CODE >517:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FEC text21 CODE >525:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FEC text21 CODE >527:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FF4 text21 CODE >528:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FE2 text20 CODE >551:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FE2 text20 CODE >553:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FEA text20 CODE >554:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FD8 text19 CODE >561:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FD8 text19 CODE >563:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FE0 text19 CODE >564:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FCE text18 CODE >613:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FCE text18 CODE >615:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1FD6 text18 CODE >616:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1556 text17 CODE >91:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1556 text17 CODE >93:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+155A text17 CODE >94:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+156E text17 CODE >99:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1572 text17 CODE >104:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1578 text17 CODE >105:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+157A text17 CODE >117:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+157E text17 CODE >118:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1582 text17 CODE >119:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1586 text17 CODE >122:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+158A text17 CODE >123:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+158E text17 CODE >124:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1592 text17 CODE >125:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1596 text17 CODE >126:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+159A text17 CODE >160:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+159E text17 CODE >161:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15A2 text17 CODE >162:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15A6 text17 CODE >163:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15AA text17 CODE >164:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15AE text17 CODE >165:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15B2 text17 CODE >166:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15B6 text17 CODE >167:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15BA text17 CODE >168:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15BE text17 CODE >169:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15C2 text17 CODE >170:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15C6 text17 CODE >171:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15CA text17 CODE >172:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15CE text17 CODE >173:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15D2 text17 CODE >174:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15D6 text17 CODE >175:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15DA text17 CODE >176:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15DE text17 CODE >177:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15E2 text17 CODE >178:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15E6 text17 CODE >179:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15EA text17 CODE >180:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15EE text17 CODE >181:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15F2 text17 CODE >182:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15F6 text17 CODE >183:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15FA text17 CODE >200:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+15FE text17 CODE >201:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1602 text17 CODE >202:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1606 text17 CODE >203:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1608 text17 CODE >205:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1614 text17 CODE >206:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1618 text17 CODE >207:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+161A text17 CODE >209:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1626 text17 CODE >210:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+162A text17 CODE >211:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+162C text17 CODE >213:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1638 text17 CODE >214:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+163C text17 CODE >215:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+163E text17 CODE >217:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+164A text17 CODE >218:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+164E text17 CODE >219:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1650 text17 CODE >221:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+165C text17 CODE >222:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1660 text17 CODE >223:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1662 text17 CODE >225:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+166E text17 CODE >226:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+167A text17 CODE >227:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1686 text17 CODE >228:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1692 text17 CODE >229:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+169E text17 CODE >230:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+16AA text17 CODE >231:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+16B6 text17 CODE >232:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+16BA text17 CODE >233:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+16BC text17 CODE >235:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+16C8 text17 CODE >236:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+16CC text17 CODE >237:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+16CE text17 CODE >239:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+16DA text17 CODE >240:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+16DE text17 CODE >241:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+16E0 text17 CODE >243:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+16E2 text17 CODE >244:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+16E4 text17 CODE >247:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+16E8 text17 CODE >248:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1700 text17 CODE >250:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+2068 text16 CODE >52:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+2068 text16 CODE >55:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+206A text16 CODE >56:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/interrupt_manager.c
+1F86 text15 CODE >60:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1F86 text15 CODE >63:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1F8C text15 CODE >65:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1F90 text15 CODE >67:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1F94 text15 CODE >69:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1F98 text15 CODE >71:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1F9C text15 CODE >72:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1D22 text14 CODE >56:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D22 text14 CODE >61:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D26 text14 CODE >62:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D2A text14 CODE >63:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D2E text14 CODE >68:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D30 text14 CODE >69:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D34 text14 CODE >70:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D38 text14 CODE >72:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D3A text14 CODE >78:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D40 text14 CODE >79:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D44 text14 CODE >80:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D48 text14 CODE >85:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D4C text14 CODE >86:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D50 text14 CODE >87:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D54 text14 CODE >88:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D58 text14 CODE >93:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D5C text14 CODE >94:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D60 text14 CODE >95:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D64 text14 CODE >100:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D66 text14 CODE >101:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D68 text14 CODE >102:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D6A text14 CODE >107:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D6C text14 CODE >108:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D6E text14 CODE >109:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D70 text14 CODE >110:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D74 text14 CODE >115:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D78 text14 CODE >116:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D7C text14 CODE >120:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D80 text14 CODE >121:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D84 text14 CODE >122:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D88 text14 CODE >125:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1D8C text14 CODE >129:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/pin_manager.c
+1E76 text13 CODE >74:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1E76 text13 CODE >77:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1E7C text13 CODE >79:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1E80 text13 CODE >81:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1E84 text13 CODE >83:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1E88 text13 CODE >85:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1E8C text13 CODE >87:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1E90 text13 CODE >89:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1E94 text13 CODE >91:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1E98 text13 CODE >92:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1FC4 text12 CODE >203:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1FC4 text12 CODE >205:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1FCC text12 CODE >206:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1FBA text11 CODE >213:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1FBA text11 CODE >215:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1FC2 text11 CODE >216:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1FB0 text10 CODE >223:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1FB0 text10 CODE >225:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1FB8 text10 CODE >226:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1DF2 text9 CODE >74:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1DF2 text9 CODE >77:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1DF8 text9 CODE >88:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1DFC text9 CODE >101:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1E00 text9 CODE >114:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1E04 text9 CODE >117:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1E08 text9 CODE >119:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1E0A text9 CODE >121:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1E0E text9 CODE >122:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1E10 text9 CODE >123:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1E12 text9 CODE >124:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1E1E text9 CODE >125:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1E2A text9 CODE >126:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1E36 text9 CODE >127:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1F6C text8 CODE >50:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1F6C text8 CODE >52:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1F70 text8 CODE >53:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1F74 text8 CODE >54:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1F78 text8 CODE >55:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1F7C text8 CODE >56:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1F80 text8 CODE >57:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1F84 text8 CODE >58:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/mcc.c
+1702 text7 CODE >444:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1702 text7 CODE >446:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1702 text7 CODE >448:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1714 text7 CODE >451:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1726 text7 CODE >452:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1754 text7 CODE >455:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1766 text7 CODE >456:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1794 text7 CODE >460:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+179A text7 CODE >461:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+17CC text7 CODE >462:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+17D4 text7 CODE >463:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+17DA text7 CODE >464:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+17EC text7 CODE >467:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+181A text7 CODE >468:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+182C text7 CODE >469:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1830 text7 CODE >472:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1840 text7 CODE >473:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1850 text7 CODE >474:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1882 text7 CODE >475:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1898 text7 CODE >479:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+100C text6 CODE >263:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+100C text6 CODE >264:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1010 text6 CODE >265:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1014 text6 CODE >266:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1018 text6 CODE >267:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+101C text6 CODE >269:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1020 text6 CODE >273:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1030 text6 CODE >277:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1088 text6 CODE >279:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+108E text6 CODE >280:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1094 text6 CODE >281:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+109A text6 CODE >282:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+10A0 text6 CODE >283:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+10B2 text6 CODE >284:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+10C2 text6 CODE >285:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+10D2 text6 CODE >286:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+10E2 text6 CODE >287:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+10F2 text6 CODE >288:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1102 text6 CODE >289:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1112 text6 CODE >290:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1122 text6 CODE >291:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1132 text6 CODE >294:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1134 text6 CODE >295:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1138 text6 CODE >297:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+113C text6 CODE >298:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+114A text6 CODE >301:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+11A2 text6 CODE >303:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+11A8 text6 CODE >304:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+11AE text6 CODE >305:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+11B4 text6 CODE >306:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+11BA text6 CODE >307:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+11CC text6 CODE >308:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+11DC text6 CODE >309:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+11EC text6 CODE >310:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+11FC text6 CODE >311:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+120C text6 CODE >312:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+121C text6 CODE >313:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+122C text6 CODE >314:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+123C text6 CODE >315:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+124C text6 CODE >318:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1252 text6 CODE >321:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1260 text6 CODE >324:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+12B8 text6 CODE >326:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+12BE text6 CODE >327:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+12C4 text6 CODE >328:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+12CA text6 CODE >329:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+12D0 text6 CODE >330:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+12E2 text6 CODE >331:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+12F2 text6 CODE >332:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1302 text6 CODE >333:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1312 text6 CODE >334:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1322 text6 CODE >335:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1332 text6 CODE >336:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1342 text6 CODE >337:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1352 text6 CODE >338:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1362 text6 CODE >340:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1368 text6 CODE >344:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+136A text6 CODE >345:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/ecan.c
+1CA2 text5 CODE >416:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1CA2 text5 CODE >418:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1CA6 text5 CODE >420:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1CAA text5 CODE >58:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1CCE text5 CODE >423:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1CD2 text5 CODE >428:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1CE0 text5 CODE >429:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1CE4 text5 CODE >430:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1CE8 text5 CODE >431:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1CF6 text5 CODE >432:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1CFE text5 CODE >437:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1D0C text5 CODE >435:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1D1C text5 CODE >448:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1D20 text5 CODE >449:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+2062 text4 CODE >144:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+2062 text4 CODE >146:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+2066 text4 CODE >147:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1D8E text3 CODE >157:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1D8E text3 CODE >159:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1D96 text3 CODE >160:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1D9A text3 CODE >162:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1DA0 text3 CODE >163:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1DB0 text3 CODE >164:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1DC0 text3 CODE >165:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1DD6 text3 CODE >160:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1DF0 text3 CODE >167:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1B34 text2 CODE >129:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1B36 text2 CODE >131:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1B46 text2 CODE >133:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1B64 text2 CODE >134:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1B8A text2 CODE >135:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1BB0 text2 CODE >136:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1BD6 text2 CODE >137:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1C0C text2 CODE >138:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1C0E text2 CODE >142:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/mcc_generated_files/spi1.c
+1C10 text1 CODE >257:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C10 text1 CODE >259:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C10 text1 CODE >260:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C20 text1 CODE >290:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C26 text1 CODE >291:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C28 text1 CODE >293:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C3C text1 CODE >294:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C3E text1 CODE >295:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C42 text1 CODE >397:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C46 text1 CODE >399:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C4A text1 CODE >58:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C6E text1 CODE >401:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C72 text1 CODE >402:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C76 text1 CODE >403:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C7A text1 CODE >404:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C7E text1 CODE >407:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C82 text1 CODE >409:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1C90 text1 CODE >407:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1CA0 text1 CODE >414:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+189A text0 CODE >93:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+189A text0 CODE >96:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+189E text0 CODE >99:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+18A0 text0 CODE >105:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+18A2 text0 CODE >106:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+18A4 text0 CODE >107:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+18A6 text0 CODE >109:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+18A8 text0 CODE >111:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+18AC text0 CODE >112:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+18AE text0 CODE >113:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+18B0 text0 CODE >116:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+18BC text0 CODE >117:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+18BE text0 CODE >118:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+18D0 text0 CODE >119:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+18D2 text0 CODE >120:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+18D4 text0 CODE >184:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+18F4 text0 CODE >205:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1900 text0 CODE >206:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1904 text0 CODE >208:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1904 text0 CODE >209:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1908 text0 CODE >210:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1910 text0 CODE >211:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+191C text0 CODE >212:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1920 text0 CODE >215:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+192C text0 CODE >220:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1938 text0 CODE >221:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+193C text0 CODE >228:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+193C text0 CODE >229:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+193E text0 CODE >230:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1958 text0 CODE >231:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+195A text0 CODE >232:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1974 text0 CODE >233:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1980 text0 CODE >234:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1984 text0 CODE >235:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1984 text0 CODE >236:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1986 text0 CODE >237:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19A0 text0 CODE >238:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19A2 text0 CODE >239:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19A8 text0 CODE >240:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19AA text0 CODE >241:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19AE text0 CODE >242:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19AE text0 CODE >243:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19B0 text0 CODE >244:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19B4 text0 CODE >245:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19B8 text0 CODE >246:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19C4 text0 CODE >246:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19D2 text0 CODE >246:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19DA text0 CODE >246:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19E2 text0 CODE >246:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19EA text0 CODE >246:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19F2 text0 CODE >246:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+19FA text0 CODE >246:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1A02 text0 CODE >246:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1A0A text0 CODE >246:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1A14 text0 CODE >253:/home/teo/Documents/Alberto MPLAB/2_Program_Only_Run_Mode/main.c
+1E38 cinit CODE >12669:/tmp/xcXcEKjhh.s
+1E38 cinit CODE >12671:/tmp/xcXcEKjhh.s
+1E38 cinit CODE >12674:/tmp/xcXcEKjhh.s
+1E38 cinit CODE >12760:/tmp/xcXcEKjhh.s
+1E3A cinit CODE >12761:/tmp/xcXcEKjhh.s
+1E3C cinit CODE >12762:/tmp/xcXcEKjhh.s
+1E3E cinit CODE >12763:/tmp/xcXcEKjhh.s
+1E40 cinit CODE >12764:/tmp/xcXcEKjhh.s
+1E42 cinit CODE >12765:/tmp/xcXcEKjhh.s
+1E44 cinit CODE >12766:/tmp/xcXcEKjhh.s
+1E46 cinit CODE >12767:/tmp/xcXcEKjhh.s
+1E4C cinit CODE >12771:/tmp/xcXcEKjhh.s
+1E50 cinit CODE >12772:/tmp/xcXcEKjhh.s
+1E52 cinit CODE >12773:/tmp/xcXcEKjhh.s
+1E52 cinit CODE >12774:/tmp/xcXcEKjhh.s
+1E54 cinit CODE >12775:/tmp/xcXcEKjhh.s
+1E56 cinit CODE >12776:/tmp/xcXcEKjhh.s
+1E58 cinit CODE >12779:/tmp/xcXcEKjhh.s
+1E5C cinit CODE >12780:/tmp/xcXcEKjhh.s
+1E5E cinit CODE >12781:/tmp/xcXcEKjhh.s
+1E5E cinit CODE >12782:/tmp/xcXcEKjhh.s
+1E60 cinit CODE >12783:/tmp/xcXcEKjhh.s
+1E62 cinit CODE >12784:/tmp/xcXcEKjhh.s
+1E64 cinit CODE >12792:/tmp/xcXcEKjhh.s
+1E66 cinit CODE >12793:/tmp/xcXcEKjhh.s
+1E68 cinit CODE >12794:/tmp/xcXcEKjhh.s
+1E6A cinit CODE >12795:/tmp/xcXcEKjhh.s
+1E6C cinit CODE >12796:/tmp/xcXcEKjhh.s
+1E6E cinit CODE >12797:/tmp/xcXcEKjhh.s
+1E70 cinit CODE >12803:/tmp/xcXcEKjhh.s
+1E70 cinit CODE >12805:/tmp/xcXcEKjhh.s
+1E72 cinit CODE >12806:/tmp/xcXcEKjhh.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_SPI1SCKPPS 3AE0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_x 5A 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_y 59 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1SDIPPS 3AE1 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hspace_0 10000 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hspace_1 82 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hspace_2 0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hspace_4 60000A 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_SetRXB1OverflowHandler 2028 0 CODE 0 text26 dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXM0EIDH 37BA 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXM0EIDL 37BB 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXM0SIDH 37B8 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXM0SIDL 37B9 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXM1EIDH 37BE 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXM1EIDL 37BF 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXM1SIDH 37BC 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXM1SIDL 37BD 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production/2_Program_Only_Run_Mode.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcXkegogD.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_INTERRUPT_Initialize 206C 0 CODE 0 text16 dist/default/production/2_Program_Only_Run_Mode.production.o
+SPI1_ExchangeBlock@blockSize 5 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_PMD_Initialize 1E76 0 CODE 0 text13 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lsmallconst 1000 0 SMALLCONST 0 smallconst dist/default/production/2_Program_Only_Run_Mode.production.o
+_LATA 3FBA 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_LATB 3FBB 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_LATC 3FBC 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_PMD0 39C0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_PMD1 39C1 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_PMD2 39C2 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_PMD3 39C3 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_PMD4 39C4 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_PMD5 39C5 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_PMD6 39C6 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_PMD7 39C7 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_WPUA 3A41 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_WPUB 3A51 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_WPUC 3A61 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_WPUE 3A81 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+___sp 0 0 STACK 2 stack /tmp/xcXkegogD.o
+_cont 38 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_main 189A 0 CODE 0 text0 dist/default/production/2_Program_Only_Run_Mode.production.o
+start FFFC 0 CODE 0 init /tmp/xcXkegogD.o
+SPI1_ExchangeBlock@data 7 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_SPI1_Initialize 1E38 0 CODE 0 text9 dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXWarningDefaultHandler 207E 0 CODE 0 text51 dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1_TxInterruptHandler 7A 0 BANK0 1 nvBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_RXB0OverflowDefaultHandler 208A 0 CODE 0 text56 dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_SetTXB1InterruptHandler 1FF6 0 CODE 0 text22 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_TXWarningDefaultHandler 2080 0 CODE 0 text51 dist/default/production/2_Program_Only_Run_Mode.production.o
+_WakeUpDefaultInterruptHandler 2070 0 CODE 0 text37 dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_WAKI_ISR 1E9A 0 CODE 0 text36 dist/default/production/2_Program_Only_Run_Mode.production.o
+ECAN_SetWakeUpInterruptHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_spi1_configuration 1006 0 SMALLCONST 0 smallconst dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1_Close 2062 0 CODE 0 text4 dist/default/production/2_Program_Only_Run_Mode.production.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+sendData@op 1C 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__accesstop 60 0 ABS 0 - /tmp/xcXkegogD.o
+intlevel0 0 0 CODE 0 text /tmp/xcXkegogD.o
+intlevel1 0 0 CODE 0 text /tmp/xcXkegogD.o
+intlevel2 0 0 CODE 0 text /tmp/xcXkegogD.o
+intlevel3 0 0 CODE 0 text /tmp/xcXkegogD.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_BusOffHandler 48 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1InterruptHandler 50 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_data_RX 58 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_data_TX 5C 0 COMRAM 1 dataCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_convertCANid2Reg 189A 0 CODE 0 text7 dist/default/production/2_Program_Only_Run_Mode.production.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_PMD_Initialize 1E9A 0 CODE 0 text13 dist/default/production/2_Program_Only_Run_Mode.production.o
+convertCANid2Reg@wipSIDL 14 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_TXB2DefaultInterruptHandler 2074 0 CODE 0 text39 dist/default/production/2_Program_Only_Run_Mode.production.o
+_COMSTATbits 3F90 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_CAN_receive$0 1 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__pidataCOMRAM 208C 0 CODE 0 idataCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_degrees 64 0 BANK0 1 bssBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+ivt0x8_base 1F9E 0 CODE 0 ivt0x8 dist/default/production/2_Program_Only_Run_Mode.production.o
+ECAN_SetRXB1InterruptHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1CON0bits 3D14 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+sendAck@op 1C 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1_Initialize 1DF2 0 CODE 0 text9 dist/default/production/2_Program_Only_Run_Mode.production.o
+_spi1_configuration 1001 0 SMALLCONST 0 smallconst dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_SetWakeUpInterruptHandler 1FD8 0 CODE 0 text18 dist/default/production/2_Program_Only_Run_Mode.production.o
+_ANSELA 3A40 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_ANSELB 3A50 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_ANSELC 3A60 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+convertCANid2Reg@tempPassedInID 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_Initialize 1702 0 CODE 0 text17 dist/default/production/2_Program_Only_Run_Mode.production.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXkegogD.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXkegogD.o
+ECAN_SetTXB1InterruptHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_RXB1DefaultInterruptHandler 207A 0 CODE 0 text45 dist/default/production/2_Program_Only_Run_Mode.production.o
+_CANCON 3F8F 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_INTERRUPT_InterruptManager 1556 0 CODE 0 text32 dist/default/production/2_Program_Only_Run_Mode.production.o
+_CIOCON 3700 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1_RxInterruptHandler 7C 0 BANK0 1 nvBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_SetRXB0InterruptHandler 2046 0 CODE 0 text29 dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_TXB0I_ISR 1EF4 0 CODE 0 text42 dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0DLC 37E5 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1DLC 37D5 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2DLC 37C5 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_MessageErrorInterruptHandler 3C 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_TXB1I_ISR 1ED6 0 CODE 0 text40 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_SPI1_Close 2068 0 CODE 0 text4 dist/default/production/2_Program_Only_Run_Mode.production.o
+__LnvBANK0 0 0 ABS 0 nvBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXB1OverflowDefaultHandler 2086 0 CODE 0 text55 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_SetRXPassiveHandler 201E 0 CODE 0 text25 dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_TXB2I_ISR 1EB8 0 CODE 0 text38 dist/default/production/2_Program_Only_Run_Mode.production.o
+ECAN_SetMessageErrorInterruptHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_CAN_transmit 100C 0 CODE 0 text6 dist/default/production/2_Program_Only_Run_Mode.production.o
+_INLVLA 3A44 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_INLVLB 3A54 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_INLVLC 3A64 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_INLVLE 3A84 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_SetRXWarningHandler 2014 0 CODE 0 text24 dist/default/production/2_Program_Only_Run_Mode.production.o
+SPI1_SetTxInterruptHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_CANRXPPS 3AED 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_INTCON0bits 3FD2 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXPassiveDefaultHandler 2080 0 CODE 0 text52 dist/default/production/2_Program_Only_Run_Mode.production.o
+_PIN_MANAGER_Initialize 1D22 0 CODE 0 text14 dist/default/production/2_Program_Only_Run_Mode.production.o
+start_initialization 1E38 0 CODE 0 cinit dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_Initialize 1556 0 CODE 0 text17 dist/default/production/2_Program_Only_Run_Mode.production.o
+SPI1_ExchangeBlock@block 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_ODCONA 3A42 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_ODCONB 3A52 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_ODCONC 3A62 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_TXPassiveDefaultHandler 2082 0 CODE 0 text52 dist/default/production/2_Program_Only_Run_Mode.production.o
+_OSCFRQ 39DF 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_RXB0I_ISR 1F30 0 CODE 0 text46 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_sendAck 1D22 0 CODE 0 text5 dist/default/production/2_Program_Only_Run_Mode.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_TRISBbits 3FC3 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TRISCbits 3FC4 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_RXB1I_ISR 1F12 0 CODE 0 text44 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_SetTXPassiveHandler 1FEC 0 CODE 0 text20 dist/default/production/2_Program_Only_Run_Mode.production.o
+___rparam_used 1 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RB2PPS 3A0A 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RC5PPS 3A15 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+ECAN_SetRXWarningHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_SYSTEM_Initialize 1F86 0 CODE 0 text8 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_TXB0I_ISR 1F12 0 CODE 0 text42 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_SetBusOffHandler 205A 0 CODE 0 text31 dist/default/production/2_Program_Only_Run_Mode.production.o
+__pcstackBANK0 80 0 BANK0 1 cstackBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_TXB1DefaultInterruptHandler 2076 0 CODE 0 text41 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_TXB1I_ISR 1EF4 0 CODE 0 text40 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_TXB2I_ISR 1ED6 0 CODE 0 text38 dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0D0 37E6 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0D1 37E7 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0D2 37E8 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0D3 37E9 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0D4 37EA 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0D5 37EB 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0D6 37EC 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0D7 37ED 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1D0 37D6 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1D1 37D7 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1D2 37D8 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1D3 37D9 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1D4 37DA 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1D5 37DB 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1D6 37DC 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1D7 37DD 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2D0 37C6 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2D1 37C7 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2D2 37C8 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2D3 37C9 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2D4 37CA 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2D5 37CB 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2D6 37CC 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2D7 37CD 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_BusOffDefaultHandler 208C 0 CODE 0 text57 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_SetTXWarningHandler 1FE2 0 CODE 0 text19 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_WAKI_ISR 1EB8 0 CODE 0 text36 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_MessageErrorDefaultInterruptHandler 207E 0 CODE 0 text49 dist/default/production/2_Program_Only_Run_Mode.production.o
+isa$xinst 0 0 ABS 0 - /tmp/xcXkegogD.o
+_ReceiveMsg 6C 0 BANK0 1 bssBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_RXB0DefaultInterruptHandler 207C 0 CODE 0 text47 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_SetTXB1InterruptHandler 2000 0 CODE 0 text22 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank0 0 0 ABS 0 bank0 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank1 0 0 ABS 0 bank1 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank2 0 0 ABS 0 bank2 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank3 0 0 ABS 0 bank3 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank4 0 0 ABS 0 bank4 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank8 0 0 ABS 0 bank8 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank9 0 0 ABS 0 bank9 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hcinit 0 0 ABS 0 cinit dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hconst 0 0 CONST 0 const dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_SetBusOffHandler 2050 0 CODE 0 text31 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hidata 0 0 CODE 0 idata dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hidloc 200010 0 IDLOC 5 idloc dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_IRXI_ISR 1F4E 0 CODE 0 text48 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hparam 0 0 ABS 0 rparam dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_SetRXB0OverflowHandler 2032 0 CODE 0 text28 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hstack 0 0 STACK 2 stack dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext0 0 0 ABS 0 text0 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext1 0 0 ABS 0 text1 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext2 0 0 ABS 0 text2 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext3 0 0 ABS 0 text3 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext4 0 0 ABS 0 text4 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext5 0 0 ABS 0 text5 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext6 0 0 ABS 0 text6 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext7 0 0 ABS 0 text7 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext8 0 0 ABS 0 text8 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext9 0 0 ABS 0 text9 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank10 0 0 ABS 0 bank10 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank11 0 0 ABS 0 bank11 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank12 0 0 ABS 0 bank12 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank13 0 0 ABS 0 bank13 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank14 0 0 ABS 0 bank14 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbank15 0 0 ABS 0 bank15 dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_SetWakeUpInterruptHandler 1FCE 0 CODE 0 text18 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbigram 0 0 ABS 0 bigram dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbigsfr 0 0 ABS 0 bigsfr dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_CAN_transmit 136C 0 CODE 0 text6 dist/default/production/2_Program_Only_Run_Mode.production.o
+__smallconst 1000 0 SMALLCONST 0 smallconst /tmp/xcXkegogD.o
+__Hcomram 0 0 ABS 0 comram dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hconfig 30000A 0 CONFIG 4 config dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_RXB0I_ISR 1F4E 0 CODE 0 text46 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank0 0 0 ABS 0 bank0 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank1 0 0 ABS 0 bank1 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank2 0 0 ABS 0 bank2 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank3 0 0 ABS 0 bank3 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank4 0 0 ABS 0 bank4 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank8 0 0 ABS 0 bank8 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank9 0 0 ABS 0 bank9 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lcinit 0 0 ABS 0 cinit dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lconst 0 0 CONST 0 const dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lidata 0 0 CODE 0 idata dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lidloc 0 0 IDLOC 5 idloc dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lparam 0 0 ABS 0 rparam dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lstack 0 0 STACK 2 stack dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext0 0 0 ABS 0 text0 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext1 0 0 ABS 0 text1 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext2 0 0 ABS 0 text2 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext3 0 0 ABS 0 text3 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext4 0 0 ABS 0 text4 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext5 0 0 ABS 0 text5 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext6 0 0 ABS 0 text6 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext7 0 0 ABS 0 text7 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext8 0 0 ABS 0 text8 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext9 0 0 ABS 0 text9 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_RXB1I_ISR 1F30 0 CODE 0 text44 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_WakeUpDefaultInterruptHandler 2072 0 CODE 0 text37 dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_SetRXB1OverflowHandler 201E 0 CODE 0 text26 dist/default/production/2_Program_Only_Run_Mode.production.o
+_PORTAbits 3FCA 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXB0OverflowDefaultHandler 2088 0 CODE 0 text56 dist/default/production/2_Program_Only_Run_Mode.production.o
+_INTERRUPT_Initialize 2068 0 CODE 0 text16 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Habs1 0 0 ABS 0 abs1 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hdata 0 0 ABS 0 data dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hheap 0 0 HEAP 7 heap dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hinit 10000 0 CODE 0 init dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htemp 0 0 COMRAM 1 temp dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext 0 0 ABS 0 text dist/default/production/2_Program_Only_Run_Mode.production.o
+__Labs1 0 0 ABS 0 abs1 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ldata 0 0 ABS 0 data dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lheap 0 0 HEAP 7 heap dist/default/production/2_Program_Only_Run_Mode.production.o
+__Linit FFFC 0 CODE 0 init dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext 0 0 ABS 0 text dist/default/production/2_Program_Only_Run_Mode.production.o
+__pnvBANK0 7A 0 BANK0 1 nvBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_SPI1_SetTxInterruptHandler 1FBA 0 CODE 0 text10 dist/default/production/2_Program_Only_Run_Mode.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+_CIOCONbits 3700 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1_SetInterruptHandler 1FC4 0 CODE 0 text12 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hirdata 0 0 CODE 0 irdata dist/default/production/2_Program_Only_Run_Mode.production.o
+__S0 10000 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__S1 82 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__S4 0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__S5 0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hivt0x8 0 0 ABS 0 ivt0x8 dist/default/production/2_Program_Only_Run_Mode.production.o
+CAN_transmit@returnValue 17 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_SetRXB1InterruptHandler 2028 0 CODE 0 text27 dist/default/production/2_Program_Only_Run_Mode.production.o
+IVTBASEH 3FD6 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+IVTBASEL 3FD5 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+IVTBASEU 3FD7 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1BAUD 3D19 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1CON0 3D14 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1CON1 3D15 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1CON2 3D16 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+ECAN_SetRXB0InterruptHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__pivt0x8 1F9E 0 CODE 0 ivt0x8 dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXWarningDefaultHandler 2082 0 CODE 0 text53 dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_SetTXB0InterruptHandler 2000 0 CODE 0 text23 dist/default/production/2_Program_Only_Run_Mode.production.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_RXWarningDefaultHandler 2084 0 CODE 0 text53 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECANCON 3F91 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+ECAN_SetTXB0InterruptHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_SYSTEM_Initialize 1F6C 0 CODE 0 text8 dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXB1InterruptHandler 54 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_TXB0DefaultInterruptHandler 2078 0 CODE 0 text43 dist/default/production/2_Program_Only_Run_Mode.production.o
+__HnvBANK0 0 0 ABS 0 nvBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_SetMessageErrorInterruptHandler 2050 0 CODE 0 text30 dist/default/production/2_Program_Only_Run_Mode.production.o
+CAN_transmit@tempCanMsg 15 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+CAN_transmit@tempEIDH 18 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+CAN_transmit@tempEIDL 19 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+CAN_transmit@tempSIDH 1A 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+CAN_transmit@tempSIDL 1B 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hramtop 1000 0 RAM 0 ramtop dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0InterruptHandler 52 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hrparam 0 0 ABS 0 rparam dist/default/production/2_Program_Only_Run_Mode.production.o
+ECAN_SetTXPassiveHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__activetblptr 3 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/production/2_Program_Only_Run_Mode.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext10 0 0 ABS 0 text10 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext11 0 0 ABS 0 text11 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext14 0 0 ABS 0 text14 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext15 0 0 ABS 0 text15 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext16 0 0 ABS 0 text16 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext17 0 0 ABS 0 text17 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext18 0 0 ABS 0 text18 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext19 0 0 ABS 0 text19 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext20 0 0 ABS 0 text20 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext21 0 0 ABS 0 text21 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext22 0 0 ABS 0 text22 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext23 0 0 ABS 0 text23 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext24 0 0 ABS 0 text24 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext25 0 0 ABS 0 text25 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext26 0 0 ABS 0 text26 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext27 0 0 ABS 0 text27 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext28 0 0 ABS 0 text28 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext29 0 0 ABS 0 text29 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext30 0 0 ABS 0 text30 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext31 0 0 ABS 0 text31 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext32 0 0 ABS 0 text32 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext33 0 0 ABS 0 text33 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext34 0 0 ABS 0 text34 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext35 0 0 ABS 0 text35 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext36 0 0 ABS 0 text36 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext37 0 0 ABS 0 text37 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext38 0 0 ABS 0 text38 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext39 0 0 ABS 0 text39 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext40 0 0 ABS 0 text40 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext41 0 0 ABS 0 text41 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext42 0 0 ABS 0 text42 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext43 0 0 ABS 0 text43 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext44 0 0 ABS 0 text44 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext45 0 0 ABS 0 text45 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext46 0 0 ABS 0 text46 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext47 0 0 ABS 0 text47 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext48 0 0 ABS 0 text48 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext49 0 0 ABS 0 text49 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext50 0 0 ABS 0 text50 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext51 0 0 ABS 0 text51 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext52 0 0 ABS 0 text52 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext53 0 0 ABS 0 text53 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext54 0 0 ABS 0 text54 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext55 0 0 ABS 0 text55 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext56 0 0 ABS 0 text56 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext57 0 0 ABS 0 text57 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Htext58 0 0 ABS 0 text58 dist/default/production/2_Program_Only_Run_Mode.production.o
+sendData@SendMsg 26 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_INTERRUPT_InterruptManager 136C 0 CODE 0 text32 dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXB0OverflowHandler 4C 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_PIE2bits 3992 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_PIE5bits 3995 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext10 1FB0 0 CODE 0 text10 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext11 1FBA 0 CODE 0 text11 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext12 1FC4 0 CODE 0 text12 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext13 1E76 0 CODE 0 text13 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext14 1D22 0 CODE 0 text14 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext15 1F86 0 CODE 0 text15 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext16 2068 0 CODE 0 text16 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext17 1556 0 CODE 0 text17 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext18 1FCE 0 CODE 0 text18 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext19 1FD8 0 CODE 0 text19 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext20 1FE2 0 CODE 0 text20 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext21 1FEC 0 CODE 0 text21 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext22 1FF6 0 CODE 0 text22 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext23 2000 0 CODE 0 text23 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext24 200A 0 CODE 0 text24 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext25 2014 0 CODE 0 text25 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext26 201E 0 CODE 0 text26 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext27 2028 0 CODE 0 text27 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext28 2032 0 CODE 0 text28 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext29 203C 0 CODE 0 text29 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext30 2046 0 CODE 0 text30 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext31 2050 0 CODE 0 text31 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext32 136C 0 CODE 0 text32 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext33 206C 0 CODE 0 text33 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext34 205A 0 CODE 0 text34 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext35 206E 0 CODE 0 text35 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext36 1E9A 0 CODE 0 text36 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext37 2070 0 CODE 0 text37 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext38 1EB8 0 CODE 0 text38 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext39 2072 0 CODE 0 text39 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext40 1ED6 0 CODE 0 text40 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext41 2074 0 CODE 0 text41 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext42 1EF4 0 CODE 0 text42 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext43 2076 0 CODE 0 text43 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext44 1F12 0 CODE 0 text44 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext45 2078 0 CODE 0 text45 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext46 1F30 0 CODE 0 text46 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext47 207A 0 CODE 0 text47 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext48 1F4E 0 CODE 0 text48 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext49 207C 0 CODE 0 text49 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext50 1A20 0 CODE 0 text50 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext51 207E 0 CODE 0 text51 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext52 2080 0 CODE 0 text52 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext53 2082 0 CODE 0 text53 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext54 2084 0 CODE 0 text54 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext55 2086 0 CODE 0 text55 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext56 2088 0 CODE 0 text56 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext57 208A 0 CODE 0 text57 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext58 0 0 CODE 0 text58 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_SPI1_SetRxInterruptHandler 1FC4 0 CODE 0 text11 dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXPassiveHandler 44 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2DefaultInterruptHandler 2072 0 CODE 0 text39 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_PIN_MANAGER_Initialize 1D8E 0 CODE 0 text14 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank10 0 0 ABS 0 bank10 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank11 0 0 ABS 0 bank11 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank12 0 0 ABS 0 bank12 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank13 0 0 ABS 0 bank13 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank14 0 0 ABS 0 bank14 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbank15 0 0 ABS 0 bank15 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbigram 0 0 ABS 0 bigram dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbigsfr 0 0 ABS 0 bigsfr dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lcomram 0 0 ABS 0 comram dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lconfig 0 0 CONFIG 4 config dist/default/production/2_Program_Only_Run_Mode.production.o
+_LATCbits 3FBC 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXB1OverflowHandler 4A 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXWarningHandler 40 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_position_bits 68 0 BANK0 1 bssBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1_DefaultHandler 206E 0 CODE 0 text35 dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXB1DefaultInterruptHandler 2078 0 CODE 0 text45 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production/2_Program_Only_Run_Mode.production.o
+sendData@data_TX 22 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production/2_Program_Only_Run_Mode.production.o
+isa$std 1 0 ABS 0 - /tmp/xcXkegogD.o
+_ECAN_SetTXB2InterruptHandler 1FEC 0 CODE 0 text21 dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_ERRI_ISR 1A20 0 CODE 0 text50 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_SPI1_ExchangeBlock 1DF2 0 CODE 0 text3 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_SPI1_Open 1C10 0 CODE 0 text2 dist/default/production/2_Program_Only_Run_Mode.production.o
+stackhi 0 0 ABS 0 - /tmp/xcXkegogD.o
+stacklo 0 0 ABS 0 - /tmp/xcXkegogD.o
+__end_of_ECAN_IRXI_ISR 1F6C 0 CODE 0 text48 dist/default/production/2_Program_Only_Run_Mode.production.o
+_OSCCON1 39D9 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_OSCCON3 39DB 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_OSCTUNE 39DE 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_sendAck 1CA2 0 CODE 0 text5 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lirdata 0 0 CODE 0 irdata dist/default/production/2_Program_Only_Run_Mode.production.o
+__Livt0x8 0 0 ABS 0 ivt0x8 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lspace_0 0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lspace_1 0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lspace_2 0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lspace_4 0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_sendData 1C10 0 CODE 0 text1 dist/default/production/2_Program_Only_Run_Mode.production.o
+__pbssCOMRAM 34 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXPassiveHandler 46 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2InterruptHandler 4E 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+SPI1_SetInterruptHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_PIR2bits 39A2 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_PIR5bits 39A5 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+SPI1_Open@spi1UniqueConfiguration 4 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2CONbits 37C0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_SPI1_DefaultTxHandler 206E 0 CODE 0 text33 dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1SSPPS 3AE2 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1TCNTL 3D12 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+end_of_initialization 1E70 0 CODE 0 cinit dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1_Open 1B34 0 CODE 0 text2 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_sendData 1CA2 0 CODE 0 text1 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXWarningHandler 42 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXPassiveDefaultHandler 2084 0 CODE 0 text54 dist/default/production/2_Program_Only_Run_Mode.production.o
+ECAN_SetBusOffHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1_ExchangeBlock 1D8E 0 CODE 0 text3 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_RXPassiveDefaultHandler 2086 0 CODE 0 text54 dist/default/production/2_Program_Only_Run_Mode.production.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXB1CONbits 37F0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lramtop 1000 0 RAM 0 ramtop dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lrparam 0 0 ABS 0 rparam dist/default/production/2_Program_Only_Run_Mode.production.o
+_BRGCON1 3703 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_BRGCON2 3704 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_BRGCON3 3705 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+ECAN_SetRXB1OverflowHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0EIDH 37E3 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0EIDL 37E4 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0SIDH 37E1 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0SIDL 37E2 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__pcinit 1E38 0 CODE 0 cinit dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1EIDH 37D3 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1EIDL 37D4 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1SIDH 37D1 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1SIDL 37D2 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2EIDH 37C3 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2EIDL 37C4 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2SIDH 37C1 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB2SIDL 37C2 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext0 189A 0 CODE 0 text0 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext1 1C10 0 CODE 0 text1 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext2 1B34 0 CODE 0 text2 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext3 1D8E 0 CODE 0 text3 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext4 2062 0 CODE 0 text4 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext5 1CA2 0 CODE 0 text5 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext6 100C 0 CODE 0 text6 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext7 1702 0 CODE 0 text7 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext8 1F6C 0 CODE 0 text8 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ptext9 1DF2 0 CODE 0 text9 dist/default/production/2_Program_Only_Run_Mode.production.o
+convertCANid2Reg@canIdType 7 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1_DefaultTxHandler 206C 0 CODE 0 text33 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext10 0 0 ABS 0 text10 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext11 0 0 ABS 0 text11 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext14 0 0 ABS 0 text14 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext15 0 0 ABS 0 text15 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext16 0 0 ABS 0 text16 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext17 0 0 ABS 0 text17 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext18 0 0 ABS 0 text18 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext19 0 0 ABS 0 text19 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext20 0 0 ABS 0 text20 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext21 0 0 ABS 0 text21 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext22 0 0 ABS 0 text22 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext23 0 0 ABS 0 text23 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext24 0 0 ABS 0 text24 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext25 0 0 ABS 0 text25 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext26 0 0 ABS 0 text26 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext27 0 0 ABS 0 text27 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext28 0 0 ABS 0 text28 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext29 0 0 ABS 0 text29 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext30 0 0 ABS 0 text30 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext31 0 0 ABS 0 text31 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext32 0 0 ABS 0 text32 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext33 0 0 ABS 0 text33 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext34 0 0 ABS 0 text34 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext35 0 0 ABS 0 text35 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext36 0 0 ABS 0 text36 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext37 0 0 ABS 0 text37 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext38 0 0 ABS 0 text38 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext39 0 0 ABS 0 text39 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext40 0 0 ABS 0 text40 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext41 0 0 ABS 0 text41 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext42 0 0 ABS 0 text42 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext43 0 0 ABS 0 text43 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext44 0 0 ABS 0 text44 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext45 0 0 ABS 0 text45 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext46 0 0 ABS 0 text46 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext47 0 0 ABS 0 text47 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext48 0 0 ABS 0 text48 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext49 0 0 ABS 0 text49 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext50 0 0 ABS 0 text50 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext51 0 0 ABS 0 text51 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext52 0 0 ABS 0 text52 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext53 0 0 ABS 0 text53 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext54 0 0 ABS 0 text54 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext55 0 0 ABS 0 text55 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext56 0 0 ABS 0 text56 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext57 0 0 ABS 0 text57 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Ltext58 0 0 ABS 0 text58 dist/default/production/2_Program_Only_Run_Mode.production.o
+__ramtop 1000 0 RAM 0 ramtop /tmp/xcXkegogD.o
+_pushFlag 3A 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+sendAck@AckMsg 22 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/production/2_Program_Only_Run_Mode.production.o
+_BusOffDefaultHandler 208A 0 CODE 0 text57 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1CONbits 37D0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB1DefaultInterruptHandler 2074 0 CODE 0 text41 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_SetRXB1InterruptHandler 2032 0 CODE 0 text27 dist/default/production/2_Program_Only_Run_Mode.production.o
+_BRGCON3bits 3705 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__psmallconst 1000 0 SMALLCONST 0 smallconst dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_SPI1_DefaultRxHandler 2062 0 CODE 0 text34 dist/default/production/2_Program_Only_Run_Mode.production.o
+_MessageErrorDefaultInterruptHandler 207C 0 CODE 0 text49 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_SetTXB0InterruptHandler 200A 0 CODE 0 text23 dist/default/production/2_Program_Only_Run_Mode.production.o
+_SLRCONA 3A43 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_SLRCONB 3A53 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_SLRCONC 3A63 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+___heap_hi 0 0 ABS 0 - /tmp/xcXkegogD.o
+___heap_lo 0 0 ABS 0 - /tmp/xcXkegogD.o
+_CAN_receive 0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_SetRXPassiveHandler 2014 0 CODE 0 text25 dist/default/production/2_Program_Only_Run_Mode.production.o
+___param_bank 0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXB0CONbits 3F80 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of__initialization 1E70 0 CODE 0 cinit dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXB0DefaultInterruptHandler 207A 0 CODE 0 text47 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_SPI1_DefaultHandler 2070 0 CODE 0 text35 dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1_SetTxInterruptHandler 1FB0 0 CODE 0 text10 dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1_InterruptHandler 7E 0 BANK0 1 nvBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1CLK 3D1C 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1RXB 3D10 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1TXB 3D11 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_SetRXWarningHandler 200A 0 CODE 0 text24 dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1_DefaultRxHandler 205A 0 CODE 0 text34 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_RXB1OverflowDefaultHandler 2088 0 CODE 0 text55 dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0CONbits 37E0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+ECAN_SetTXB2InterruptHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_message 34 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_SPI1_SetInterruptHandler 1FCE 0 CODE 0 text12 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_main 1A20 0 CODE 0 text0 dist/default/production/2_Program_Only_Run_Mode.production.o
+SPI1_SetRxInterruptHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_canId 100A 0 SMALLCONST 0 smallconst dist/default/production/2_Program_Only_Run_Mode.production.o
+_CANSTAT 3F8E 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_OSCEN 39DD 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TRISA 3FC2 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TRISB 3FC3 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_TRISC 3FC4 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_SetRXB0InterruptHandler 203C 0 CODE 0 text29 dist/default/production/2_Program_Only_Run_Mode.production.o
+__HRAM 0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hbss 0 0 RAM 1 bss dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hram 0 0 ABS 0 ram dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hsfr 0 0 ABS 0 sfr dist/default/production/2_Program_Only_Run_Mode.production.o
+__LRAM 1 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lbss 0 0 RAM 1 bss dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lram 0 0 ABS 0 ram dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lsfr 0 0 ABS 0 sfr dist/default/production/2_Program_Only_Run_Mode.production.o
+_delay 5B 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_SetTXPassiveHandler 1FE2 0 CODE 0 text20 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_ERRI_ISR 1B34 0 CODE 0 text50 dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_OSCILLATOR_Initialize 1F9E 0 CODE 0 text15 dist/default/production/2_Program_Only_Run_Mode.production.o
+__initialization 1E38 0 CODE 0 cinit dist/default/production/2_Program_Only_Run_Mode.production.o
+convertCANid2Reg@passedInEIDH 8 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+convertCANid2Reg@passedInEIDL A 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+convertCANid2Reg@passedInSIDH C 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+convertCANid2Reg@passedInSIDL E 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+ECAN_SetRXPassiveHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_SetMessageErrorInterruptHandler 2046 0 CODE 0 text30 dist/default/production/2_Program_Only_Run_Mode.production.o
+_ECAN_SetTXWarningHandler 1FD8 0 CODE 0 text19 dist/default/production/2_Program_Only_Run_Mode.production.o
+__pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/production/2_Program_Only_Run_Mode.production.o
+__pdataCOMRAM 5C 0 COMRAM 1 dataCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF0EIDH 37A2 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF0EIDL 37A3 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF0SIDH 37A0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF0SIDL 37A1 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF1EIDH 37A6 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF1EIDL 37A7 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF1SIDH 37A4 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF1SIDL 37A5 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+ECAN_SetRXB0OverflowHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF2EIDH 37AA 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF2EIDL 37AB 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF2SIDH 37A8 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF2SIDL 37A9 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF3EIDH 37AE 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF3EIDL 37AF 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF3SIDH 37AC 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF3SIDL 37AD 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF4EIDH 37B2 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF4EIDL 37B3 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF4SIDH 37B0 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF4SIDL 37B1 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF5EIDH 37B6 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF5EIDL 37B7 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF5SIDH 37B4 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXF5SIDL 37B5 0 ABS 0 - dist/default/production/2_Program_Only_Run_Mode.production.o
+ECAN_SetTXWarningHandler@handler 3 0 COMRAM 1 cstackCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_SetRXB0OverflowHandler 203C 0 CODE 0 text28 dist/default/production/2_Program_Only_Run_Mode.production.o
+_convertCANid2Reg 1702 0 CODE 0 text7 dist/default/production/2_Program_Only_Run_Mode.production.o
+_RXB0InterruptHandler 56 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hsmallconst 100C 0 SMALLCONST 0 smallconst dist/default/production/2_Program_Only_Run_Mode.production.o
+__end_of_ECAN_SetTXB2InterruptHandler 1FF6 0 CODE 0 text21 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/production/2_Program_Only_Run_Mode.production.o
+_SPI1_SetRxInterruptHandler 1FBA 0 CODE 0 text11 dist/default/production/2_Program_Only_Run_Mode.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/2_Program_Only_Run_Mode.production.o
+_WakeUpInterruptHandler 3E 0 COMRAM 1 bssCOMRAM dist/default/production/2_Program_Only_Run_Mode.production.o
+_TXB0DefaultInterruptHandler 2076 0 CODE 0 text43 dist/default/production/2_Program_Only_Run_Mode.production.o
+_OSCILLATOR_Initialize 1F86 0 CODE 0 text15 dist/default/production/2_Program_Only_Run_Mode.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text6 0 100C 100C 1081 1
+cstackCOMRAM 1 1 1 5C 1
+init 0 FFFC FFFC 4 1
+reset_vec 0 0 0 4 1
+bssBANK0 1 60 60 22 1
+smallconst 0 1000 1000 C 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
