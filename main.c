@@ -1,45 +1,12 @@
-/**
-  Generated Main Source File
-
-  Company:
-    Microchip Technology Inc.
-
-  File Name:
-    main.c
-
-  Summary:
-    This is the main file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
-
-  Description:
-    This header file provides implementations for driver APIs for all modules selected in the GUI.
-    Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
-        Device            :  PIC18F26K83
-        Driver Version    :  2.00
-*/
 
 /*
-    (c) 2018 Microchip Technology Inc. and its subsidiaries. 
-    
-    Subject to your compliance with these terms, you may use Microchip software and any 
-    derivatives exclusively with Microchip products. It is your responsibility to comply with third party 
-    license terms applicable to your use of third party software (including open source software) that 
-    may accompany Microchip software.
-    
-    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
-    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY 
-    IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS 
-    FOR A PARTICULAR PURPOSE.
-    
-    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
-    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP 
-    HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO 
-    THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL 
-    CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
-    OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
-    SOFTWARE.
-*/
+ * PIC firmware for interfacing with an absolute CUI encoder through CAN.
+ *
+ * Copyright: 2023 (C) Universidad Carlos III de Madrid
+ * Original author: Alberto Rodríguez Sanz (master's thesis, UC3M, 2023)
+ * CopyPolicy: Released under the terms of the LGPLv2.1 or later
+ */
+
 
 #include "mcc_generated_files/mcc.h"
 #include <math.h>
@@ -47,30 +14,23 @@
                          Main application
  */
 
-// MCC generated interrupts implementation, as specifed per Microchip Developer Help, these application-specific ISR functions need to be implemented in 
-// in non-MCC supplied files like [main.c]
-
-// The following implementations however follows the example for said implementation in [ecan.h]
-
-
-// Variable configurable (CAN_ID)
+// Configurable variable (CAN_ID)
 // --------------------------------------------------------------
 const unsigned long canId = 3;        //120
 // --------------------------------------------------------------
 
-// -- Prototipos de funciones
+// -- Function prototypes
 void sendData(unsigned int);
 void sendAck(unsigned int);
 void setZero();					
 void selfCalibration();
 void program_AksIM();
 
-// -- Inicialización de variables para el envío
+// -- CAN bus communication variables
 
 int pushFlag = 0; // flag para saber si está ejecutando el PUSH
 uint8_t delay;
 uint8_t  message[4];
-//int  message[4];
 uint32_t position_bits;
 double degrees;
 uint8_t x,y;
@@ -78,16 +38,8 @@ uint8_t delay;
 uCAN_MSG ReceiveMsg;
 int cont = 0;
 
-//SPI testing variables
-uint8_t data_TX = 0x32;          /* Data that will be transmitted */
-uint8_t data_RX = 0;        /* Data that will be received */
-
-
-void OverflowBuffer0 (void)
-{
-  
-
-}
+//SPI communication variables
+uint8_t data_RX[4];       /* Data that will be received */
 
 
 void main(void)
@@ -105,7 +57,6 @@ void main(void)
     TRISBbits.TRISB0 = 0;       //RC6 is an output
     TRISBbits.TRISB1 = 0;       //RC7 is an output
     
-    //ECAN_SetRXB0OverflowHandler(OverflowBuffer0);
     
     //Acknowledge message sent when the PIC is powered on
     sendAck(0x200);
@@ -182,16 +133,12 @@ void main(void)
             
         }
         
-        
-        
-     //*/
-    SPI1_Close();    
+    
     }    
 }
 
 void sendData(unsigned int op)
 {
-    uint8_t data_RX[4];
     
     /*
     The SPI module is setup to be in "Full-Duplex Mode" (TXR = 1, RXR = 1) even though the slave device (encoder) does not read the MOSI line. 
@@ -236,7 +183,6 @@ void sendData(unsigned int op)
     SPI1_Close();
       
     
-    
     position_bits = ((uint32_t)data_RX[2] >> 2) + ((uint32_t)data_RX[1] << 6) + ((uint32_t)data_RX[3] << 14);
 	//position_bits = data_RX[2] >> 2 | data_RX[1] << 6 | data_RX[3] << 14;
     degrees = (360 / pow (2,17)-1) * position_bits;      // One unit is subtracted from the total number of bits since it begins in 0
@@ -276,31 +222,15 @@ void sendAck(unsigned int op)
     AckMsg.frame.idType = dSTANDARD_CAN_MSG_ID_2_0B;
     AckMsg.frame.id = op+canId;      //op+canId 
     AckMsg.frame.dlc = 1; 
-    //AckMsg.frame.data0 = 0x32;  //Prueba CAN bus loop
-    //AckMsg.frame.data0 = 0x33;  //Prueba SPI
-    
-    
-    if(PORTAbits.RA4 == 1){
-        AckMsg.frame.data0 = 0x33;  //Prueba SPI
-    }
-    else if (PORTAbits.RA4 == 0){
-       AckMsg.frame.data0 = 0x32;  //Prueba CAN bus loop 
-    }
+    AckMsg.frame.data0 = 0x00;
+   
     
 	while (!x)
 	{
         x = CAN_transmit (&AckMsg);
-        //PORTCbits.RC6 = 1;  //LED is lit if there is an stablished connection with the PC through CAN bus
-		//x = ECANSendMessage(op + canId, NULL, 0, txFlags);	
-		//Esta función es de tipo bool, por lo que el bucle tratará de enviar el mesanje hasta que se haya encontrado un buffer vacío al que se le pueda enviar los datos .
 
 	}
-    /*
-    LATCbits.LC2 = 1;
-            __delay_ms(1000);
-            LATCbits.LC2 = 0;
-    */
-    x=0;
+    
 }
 
 
