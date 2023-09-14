@@ -1,5 +1,7 @@
-# Program_only_run_2
-This repository contains the adapted firmware of the current PIC18F2580 microcontroller for the new PIC18F26K83 microcontroller. used to test the communications prior to the PCB shortcut the CAN bus. The code is mostly disabled just to test sending an acknowledgement message back to the computer for a specific data field of 0x00. The number designator indicates which of the three available PIC18F26K83 with a THD package for testing was used for this test. The experiment was succesful but due to the CAN to USB adapter breaking no more testing could be done.
+# AksIM2-PIC18f26k83-Firmware
+This repository contains the adapted firmware from the current PIC18F2580 microcontroller for the new PIC18F26K83 microcontroller implementing the updated versions of the ECAN and SPI modules working in the "Run" device operation mode, which does not include any power saving modes of operation or features. 
+
+
 
 
 Within this firmware there are two available tests:
