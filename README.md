@@ -3,11 +3,6 @@ This repository contains the adapted firmware from the current PIC18F2580 microc
 
 
 
-
-Within this firmware there are two available tests:
-- The goal of the first test is to verify that at least one of the microcontrollers listens the messages sent by the other.
-- The goal of the second test was to create an application loop in which each time a microcontroller receives a message, it blinks the LED for 1s and sends a message that the other node receives.
-
 ## Setup
 A breadboard with two PIC18F26K83 microcontrollers connected through two MCP2561 CAN transceivers is used as a testbench.
 ![broadboard_can_bus_top_viewjpg](https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/c0f4a20e-199d-4b0a-b0b2-8a69f7578277)
