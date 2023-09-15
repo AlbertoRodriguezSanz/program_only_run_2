@@ -15,7 +15,7 @@
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC18F26K83
-        Driver Version    :  3.0.0
+        Driver Version    :  1.0.0
     The generated drivers are tested against the following:
         Compiler          :  XC8 2.36 and above or later
         MPLAB             :  MPLAB X 6.00
@@ -47,12 +47,6 @@
 #include "spi1.h"
 #include <xc.h>
 
-void SPI1_DefaultHandler(void);
-void SPI1_DefaultRxHandler(void);
-void SPI1_DefaultTxHandler(void);
-
-uint8_t data_TX = 0x32;
-
 typedef struct { 
     uint8_t con0; 
     uint8_t con1; 
@@ -61,33 +55,27 @@ typedef struct {
     uint8_t operation;
 } spi1_configuration_t;
 
+
 //con0 == SPIxCON0, con1 == SPIxCON1, con2 == SPIxCON2, baud == SPIxBAUD, operation == Master/Slave
 static const spi1_configuration_t spi1_configuration[] = {   
-    { 0x0, 0x04, 0x03, 0x01, 0 }    //SLAVE_0
-    //con0 == SPIxCON0 == 0x0;
-    //con1 == SPIxCON1 == 0x04;
-    //con2 == SPIxCON2 == 0x07;  -> VOY A PROBAR PRIMERO CON 0x03
-    //baud == SPIxBAUD == 0x1;
-    //operation == Master/Slave == 0;
+    { 0x2, 0x04, 0x03, 0x1, 0 }      //MASTER_0   
 };
 
 void SPI1_Initialize(void)
 {
-    //EN disabled; LSBF MSb first; MST bus master; BMODE every byte (BMODE = 1) ; 
-    SPI1CON0 = 0x00;    //0b00000010
-    /*
+    
+    SPI1CON0 = 0x02;
+/*
      EN = 0 -> SPI is disabled
      0000 (Unimplemented)
      LSBF = 0 -> Data is exchanged  MSb first (traditional SPI operation)
-     MST = 0 -> SPI module operates as the bus master
+     MST = 1 -> SPI module operates as the bus master
      BMODE = 0 -> SPIxTWIDTH setting applies only to the last byte exchanged; total bits sent is SPIxTWIDTH +
     (SPIxTCNT*8)    
      */
-    
-    //SMP End; CKE Idle to active; CKP Idle:Low, Active:High; FST disabled; SSP active high; SDIP active high; SDOP active high; 
-    SPI1CON1 = 0x04;    //0b11000000<-Esto no es 0x04, no me voy a molestar con BMODE = 0 por ahora, para que haya comuncacion por ambas partes asi funciona
-        /*
-     SMP = 0 -> (Slave Mode) SDI input is sampled in the middle of data output time
+    SPI1CON1 = 0x04;
+    /*
+     SMP = 0 -> (MASTER) SDI input is sampled in the middle of data output time
      CKE = 0 -> Output data changes on transition from idle to active clock state
      CKP = 0 -> Idle state for SCK is low level
      FST = 0 -> Delay to first SCK may be less than ½ baud period
@@ -97,33 +85,21 @@ void SPI1_Initialize(void)
      SDOP = 0 -> SDO Output is active high
      
      */
-    //SSET enabled; TXR not required for a transfer; RXR suspended if the RxFIFO is full; 
-    SPI1CON2 = 0x03;    //SSET = 0; Slave Select disabled
+    SPI1CON2 = 0x03;            //0x07
     /*
      BUSY = 0(X) -> (Read) Data exchange is not taking place
      SSFLT = 0(X) -> (Read) SS(in) ended normally 
      0 (Unimplemented) 
      SSET = 0
-     * SLAVE MODE*
+     * MASTER MODE*
              -> SS(out) is driven to the active state while the transmit counter is not zero
      TXR = 1 -> Data transfers are suspended if the RxFIFO is full 
      RXR = 1 -> Data transfers are suspended if the RxFIFO is full 
      */
-    
-    //CLKSEL FOSC; 
-    SPI1CLK = 0x00; 
-    
+    SPI1CLK = 0x00;
     //BAUD 1; 
-    SPI1BAUD = 0x01;        //To achieve a SPIBaud of 4MHz with a 16MHz internal oscillator
-    
-    TRISCbits.TRISC3 = 1;
-   
-    PIE2bits.SPI1IE = 1;
-    PIE2bits.SPI1RXIE = 1;
-    PIE2bits.SPI1TXIE = 1;
-    SPI1_SetInterruptHandler(SPI1_DefaultHandler);
-    SPI1_SetRxInterruptHandler(SPI1_DefaultRxHandler);
-    SPI1_SetTxInterruptHandler(SPI1_DefaultTxHandler);
+    SPI1BAUD = 0x01;
+    TRISCbits.TRISC3 = 0;
 }
 
 bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration)
@@ -132,7 +108,7 @@ bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration)
     {
         SPI1CON0 = spi1_configuration[spi1UniqueConfiguration].con0;
         SPI1CON1 = spi1_configuration[spi1UniqueConfiguration].con1;
-        SPI1CON2 = spi1_configuration[spi1UniqueConfiguration].con2 | (_SPI1CON2_SPI1RXR_MASK | _SPI1CON2_SPI1TXR_MASK);
+        SPI1CON2 = spi1_configuration[spi1UniqueConfiguration].con2;// | (_SPI1CON2_SPI1RXR_MASK | _SPI1CON2_SPI1TXR_MASK);
         SPI1BAUD = spi1_configuration[spi1UniqueConfiguration].baud;        
         TRISCbits.TRISC3 = spi1_configuration[spi1UniqueConfiguration].operation;
         SPI1CON0bits.EN = 1;
@@ -193,34 +169,4 @@ void SPI1_WriteByte(uint8_t byte)
 uint8_t SPI1_ReadByte(void)
 {
     return SPI1RXB;
-}
-
-void SPI1_DefaultHandler(void)
-{
-    // add your SPI1 interrupt custom code
-}
-
-void SPI1_SetInterruptHandler(spi1InterruptHandler_t handler)
-{
-    SPI1_InterruptHandler = handler;
-}
-
-void SPI1_DefaultRxHandler(void)
-{
-    SPI1TXB = data_TX;
-}
-
-void SPI1_SetRxInterruptHandler(spi1InterruptHandler_t handler)
-{
-    SPI1_RxInterruptHandler = handler;
-}
-
-void SPI1_DefaultTxHandler(void)
-{
-    // add your SPI1TX interrupt custom code
-}
-
-void SPI1_SetTxInterruptHandler(spi1InterruptHandler_t handler)
-{
-    SPI1_TxInterruptHandler = handler;
 }

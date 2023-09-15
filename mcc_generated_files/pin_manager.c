@@ -47,7 +47,6 @@
 */
 
 #include "pin_manager.h"
-//#include "interrupt_manager.h"
 
 
 
@@ -58,25 +57,26 @@ void PIN_MANAGER_Initialize(void)
     /**
     LATx registers
     */
-    LATA = 0x00;
+    LATA = 0x20;
+    LATAbits.LA5 = 1;
     LATB = 0x00;
     LATC = 0x00;
 
     /**
     TRISx registers
     */
-    TRISA = 0xFF;       //RA5 input (SS)->This PIC will act as the SPI slave
-    TRISB = 0xFB;       //0b11111011; RB2 output, RB3 input
-    TRISC = 0xDB;       //0b11010011; RC2 and RC5 outputs, RC4 and RC3 inputs (slave)
-    //TRISC = 0xD3;       //0b11011011; RC2, RC3, RC5 outputs,  RC4 input (master)
+    TRISA = 0x00;
+    TRISAbits.TRISA5 = 0;
+    TRISB = 0xFB;
+    TRISBbits.TRISB2 = 0;
+    TRISC = 0xD7;
     TRISCbits.TRISC2 = 0;
-    
+
     /**
     ANSELx registers
     */
-    //ANSELC = 0xC3;
     ANSELC = 0x00;
-    ANSELB = 0x00;      //0b11110011; RB2, RB3 digital
+    ANSELB = 0x00;
     ANSELA = 0x00;
 
     /**
@@ -105,27 +105,21 @@ void PIN_MANAGER_Initialize(void)
     INLVLx registers
     */
     INLVLA = 0xFF;
-    INLVLB = 0xFF; 
+    INLVLB = 0xFF;
     INLVLC = 0xFF;
     INLVLE = 0x08;
-    
-    // As specified in the datasheet SCK and SS are bidirectional signals and must be set to the same registers as PPS inputs and outputs
 
-    
+
+    RA5PPS = 0b100000 ;     //RA5->SPI1:SS;
+    //SPI1SSPPS = 0b00101;    //RA5->SPI1:SS;
+ 
+	
+    SPI1SCKPPS = 0x13;   //RC3->SPI1:SCK1;    
+    RC3PPS = 0x1E;   //RC3->SPI1:SCK1;    
     RB2PPS = 0x33;   //RB2->ECAN:CANTX0;    
-    CANRXPPS = 0x0B;   //RB3->ECAN:CANRX;      
-   
-    
-    //RA5PPS = 0b100000 ;     //RA5->SPI1:SS;
-    SPI1SSPPS = 0b00101;    //RA5->SPI1:SS;
-    SPI1SDIPPS = 0x14;   //RC4->SPI1:SDI1;
-    SPI1SCKPPS = 0x13;   //RC3->SPI1:SCK1;   
-    
-    //RC3PPS = 0x1E;   //RC3->SPI1:SCK1;    
+    CANRXPPS = 0x0B;   //RB3->ECAN:CANRX;    
     RC5PPS = 0x1F;   //RC5->SPI1:SDO1;    
-    
-    
-    
+    SPI1SDIPPS = 0x14;   //RC4->SPI1:SDI1;    
 }
   
 void PIN_MANAGER_IOC(void)

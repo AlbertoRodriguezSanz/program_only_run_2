@@ -15,7 +15,7 @@
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC18F26K83
-        Driver Version    :  3.0.0
+        Driver Version    :  1.0.0
     The generated drivers are tested against the following:
         Compiler          :  XC8 2.36 and above or later
         MPLAB             :  MPLAB X 6.00
@@ -57,10 +57,8 @@
 
 /* SPI interfaces */
 typedef enum { 
-    SLAVE_0
+    MASTER_0
 } spi1_modes_t;
-
-typedef void (*spi1InterruptHandler_t)(void);
 
 void SPI1_Initialize(void);
 bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration);
@@ -72,10 +70,4 @@ void SPI1_ReadBlock(void *block, size_t blockSize);
 void SPI1_WriteByte(uint8_t byte);
 uint8_t SPI1_ReadByte(void);
 
-void (*SPI1_InterruptHandler)(void);
-void SPI1_SetInterruptHandler(spi1InterruptHandler_t handler);
-void (*SPI1_RxInterruptHandler)(void);
-void SPI1_SetRxInterruptHandler(spi1InterruptHandler_t handler);
-void (*SPI1_TxInterruptHandler)(void);
-void SPI1_SetTxInterruptHandler(spi1InterruptHandler_t handler);
 #endif //SPI1_H

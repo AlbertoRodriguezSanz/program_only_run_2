@@ -58,19 +58,7 @@ void  INTERRUPT_Initialize (void)
 void __interrupt() INTERRUPT_InterruptManager (void)
 {
     // interrupt handler
-    if(PIE2bits.SPI1TXIE == 1 && PIR2bits.SPI1TXIF == 1)
-    {
-        SPI1_TxInterruptHandler();
-    }
-    else if(PIE2bits.SPI1IE == 1 && PIR2bits.SPI1IF == 1)
-    {
-        SPI1_InterruptHandler();
-    }
-    else if(PIE2bits.SPI1RXIE == 1 && PIR2bits.SPI1RXIF == 1)
-    {
-        SPI1_RxInterruptHandler();
-    }
-     else if(PIE5bits.WAKIE == 1 && PIR5bits.WAKIF == 1)
+    if(PIE5bits.WAKIE == 1 && PIR5bits.WAKIF == 1)
     {
         ECAN_WAKI_ISR();
     }
@@ -107,6 +95,4 @@ void __interrupt() INTERRUPT_InterruptManager (void)
         //Unhandled Interrupt
     }
 }
-/**
- End of File
-*/
+

@@ -10,13 +10,14 @@
 
 #include "mcc_generated_files/mcc.h"
 #include <math.h>
+#include <string.h>
 /*
                          Main application
  */
 
 // Configurable variable (CAN_ID)
 // --------------------------------------------------------------
-const unsigned long canId = 3;        //120
+const unsigned long canId = 120;        //120 = 0x78
 // --------------------------------------------------------------
 
 // -- Function prototypes
@@ -31,9 +32,9 @@ void program_AksIM();
 int pushFlag = 0; // flag para saber si está ejecutando el PUSH
 uint8_t delay;
 uint8_t  message[4];
-uint32_t position_bits;
-double degrees;
-uint8_t x,y;
+uint32_t position_bits, temp;
+double degrees; //XC8 defines by default the size of a double as 32 bits, can be manually modified from the Project Properties > XC8 Linker > Memory Model
+uint8_t x,y = 0;
 uint8_t delay;
 uCAN_MSG ReceiveMsg;
 int cont = 0;
@@ -48,23 +49,22 @@ void main(void)
     SYSTEM_Initialize();    //This function from the mcc.h initializes the desired pins, oscillator, interrupts and SPI paramaeters
     
     TRISCbits.TRISC2 = 0;       //RC2 is an output
+    TRISCbits.TRISC1 = 0;       //RC1 is an output
     TRISCbits.TRISC3 = 0;       //RC3 is an output
     TRISCbits.TRISC5 = 0;       //RC5 is an output
-    //PORTCbits.RC2 = 1;          //SS APAGADO -> SPI APAGADO
-    PORTAbits.RA5 = 1;
+    PORTAbits.RA5 = 1;          //SS APAGADO -> SPI APAGADO
+    TRISBbits.TRISB2 = 0;
+    TRISBbits.TRISB3 = 1;
 
-    LATB = 0x00;
-    TRISBbits.TRISB0 = 0;       //RC6 is an output
-    TRISBbits.TRISB1 = 0;       //RC7 is an output
-    
+    LATCbits.LC2 = 0;
     
     //Acknowledge message sent when the PIC is powered on
     sendAck(0x200);
-
+    LATCbits.LC1 = 1;
     
     while (1)
     {   
-
+        
         
         /*
         if (RXB0CONbits.RXFUL == 0)
@@ -92,6 +92,7 @@ void main(void)
         
         if (CAN_receive(&ReceiveMsg))
         {
+            LATCbits.LC2 = 1;
             if (ReceiveMsg.frame.id!= canId)
             {
                 if (pushFlag)
@@ -133,8 +134,9 @@ void main(void)
             
         }
         
-    
-    }    
+     
+    } 
+            
 }
 
 void sendData(unsigned int op)
@@ -181,30 +183,28 @@ void sendData(unsigned int op)
     PORTAbits.RA5 = 1;
     //SPI module is disabled
     SPI1_Close();
+    LATCbits.LC2 = 1;
       
     
     position_bits = ((uint32_t)data_RX[2] >> 2) + ((uint32_t)data_RX[1] << 6) + ((uint32_t)data_RX[3] << 14);
 	//position_bits = data_RX[2] >> 2 | data_RX[1] << 6 | data_RX[3] << 14;
-    degrees = (360 / pow (2,17)-1) * position_bits;      // One unit is subtracted from the total number of bits since it begins in 0
-    
+    degrees = (360 / pow (2,17)-1) * (double)position_bits;      // One unit is subtracted from the total number of bits since it begins in 0
+    memcpy(&temp, &degrees, 4);
 
-    /*
-    x = 0;
-    uCAN_MSG SendMsg;
-    SendMsg.frame.idType = dSTANDARD_CAN_MSG_ID_2_0B;
-    SendMsg.frame.id = op+canId;
-    SendMsg.frame.dlc = 3;
-    SendMsg.frame.data0 = position_bits & 0xFF;
-    SendMsg.frame.data1 = (position_bits >> 8) & 0xFF;
-    SendMsg.frame.data2 = (position_bits >> 16) & 0xFF;
-    */
     
     x = 0;
     uCAN_MSG SendMsg;
     SendMsg.frame.idType = dSTANDARD_CAN_MSG_ID_2_0B;
     SendMsg.frame.id = op+canId;
-    SendMsg.frame.dlc = 1;
-    SendMsg.frame.data0 = degrees;
+    SendMsg.frame.dlc = 8;
+    SendMsg.frame.data0 = temp & 0x000000FF;
+    SendMsg.frame.data1 = (temp & 0x0000FF00) >> 8;
+    SendMsg.frame.data2 = (temp & 0x00FF0000) >> 16;
+    SendMsg.frame.data3 = (temp & 0xFF000000) >> 24;
+    SendMsg.frame.data4 = position_bits & 0x000000FF;
+    SendMsg.frame.data5 = (position_bits & 0x0000FF00) >> 8;
+    SendMsg.frame.data6 = (position_bits & 0x00FF0000) >> 16;
+    SendMsg.frame.data7 = (position_bits & 0xFF000000) >> 24;
     
     while (!x)
     {
@@ -222,14 +222,15 @@ void sendAck(unsigned int op)
     AckMsg.frame.idType = dSTANDARD_CAN_MSG_ID_2_0B;
     AckMsg.frame.id = op+canId;      //op+canId 
     AckMsg.frame.dlc = 1; 
-    AckMsg.frame.data0 = 0x00;
+    AckMsg.frame.data0 = 0x33;
    
-    
 	while (!x)
 	{
         x = CAN_transmit (&AckMsg);
 
-	}
+	}  
+    
+    
     
 }
 
