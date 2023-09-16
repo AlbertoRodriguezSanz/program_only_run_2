@@ -72,7 +72,7 @@ A 1 Mbps CAN channel is used to interface with the receiver code running on the 
 
 ## See also
 
-* Víctor César Sanz Labella, *Diseño del circuito electrónico de control y programación de una mano subactuada para el robot humanoide TEO*, bachelor's thesis, Universidad Carlos III de Madrid, 2014. ([lacquey-pic-firmware](https://github.com/roboticslab-uc3m/lacquey-pic-firmware))
+* Víctor César Sanz Labella, *Diseño del circuito electrónico de control y programación de una mano subactuada para el robot humanoide TEO*, bachelor's thesis, Universidad Carlos III de Madrid, 2014. ([cui-pic-firmware]([https://github.com/roboticslab-uc3m/lacquey-pic-firmware](https://github.com/roboticslab-uc3m/cui-pic-firmware)))
 
 Example of the expected bit timing diagram for both devices operating at a bus clock of 4MHz exchanging 4 bytes of data uninterrupted probed from the Slave device. 
 
