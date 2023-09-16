@@ -59,7 +59,7 @@ Then, follow the next steps:
 * Connect the programmer to the PIC: `Programmer> Connect`
 * Program: `Programmer> Program`
 
-## Interfacing with the CUI
+## Interfacing with the AksIM-2 encoder
 
 A 1 Mbps CAN channel is used to interface with the receiver code running on the PIC. Encoder data (in joint space, expressed in degrees) can be retrieved in two operation modes: continuous stream (push mode) and on demand (pull mode). In push mode, encoder reads are streamed after the start command is issued, using the specified delay, until a stop command is received. All commands (as well as the streamed data) return an acknowledge message with the corresponding operation code, i.e., the returned message ID is op code + canId.
 
@@ -69,7 +69,6 @@ A 1 Mbps CAN channel is used to interface with the receiver code running on the 
 | start push mode                            | 0x01 (byte 0)<br>*delay* (byte 1) | empty             | 0x100   |
 | stop push mode                             | 0x02                              | empty             | 0x100   |
 | poll current value                         | 0x03                              | *value* (4 bytes) | 0x180   |
-| set encoder to zero                        | 0xFF                              | empty             | 0x200   |
 
 ## See also
 
