@@ -32,8 +32,9 @@ For this test the PICkit4 in-circuit debugger/programmer will be used to load th
 - VDD
 - VSS
 
+<p align = "center">
 <img src="https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/3c4a5d15-1f9f-4ac2-9d40-555727d5c120" width = "600" />
-
+</p>
   
 ## Requirements
 
