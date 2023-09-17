@@ -26,15 +26,13 @@ The following parameters are configured with the Microchip Code Configurator plu
 No filters or masks are setup for the CAN bus communications beforehand. Messages' ID are filtered in the `main.c` file as in the previous firmware for the PIC18F2580 microcontroller.
 
 For this test the PICkit4 in-circuit debugger/programmer will be used to load the firmware into the microcontroller. This needs to be connected to the microcontroller with the following pins.
-- MCLR
+- MCLR (needs to be connected through two series pull-up resistors: 10kΩ and 100-470Ω to the power supply)
 - PGD
 - PGC
 - VDD
 - VSS
-![pickit4 connections](https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/aca34265-d625-4ffe-b99b-b4cd80b32269)
 
-On the protoboard the MCLR pin needs to include two resistors of 10kΩ (R1) and 470Ω (R2) máx.
-![mclr connection](https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/b95aa3bf-8a20-4b94-be2d-364be542fe47)
+![aksim_breadboard_schematic](https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/3c4a5d15-1f9f-4ac2-9d40-555727d5c120)
 
   
 ## Requirements
