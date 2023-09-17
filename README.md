@@ -7,6 +7,7 @@ This repository contains the adapted firmware from the current PIC18F2580 microc
 A breadboard with two PIC18F26K83 microcontrollers connected through two MCP2561 CAN transceivers is used as a testbench.
 ![broadboard_can_bus_top_viewjpg](https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/c0f4a20e-199d-4b0a-b0b2-8a69f7578277)
 
+## ECAN module configuration
 The following parameters are configured with the Microchip Code Configurator plugin (MCC):
 - Clock Settings
   - Clock Source: Use system clock as CAN system clock
@@ -21,7 +22,9 @@ The following parameters are configured with the Microchip Code Configurator plu
   - Propagation Segment: 1xTQ
 - Transmit-Receive Settings
   - Operation Mode: Mode 0 (Legacy)
- 
+
+No filters or masks are setup for the CAN bus communications beforehand. Messages' ID are filtered in the `main.c` file as in the previous firmware for the PIC18F2580 microcontroller.
+
 For this test the PICkit4 in-circuit debugger/programmer will be used to load the firmware into the microcontroller. This needs to be connected to the microcontroller with the following pins.
 - MCLR
 - PGD
@@ -38,7 +41,7 @@ On the protoboard the MCLR pin needs to include two resistors of 10kΩ (R1) and 
 
 Install MPLAB X IDE tool for Windows, Linux or MAC from the following link ([download link](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide#tabs)).
 
-## How to download the firmware to the PIC
+## Operation
 
 Once MPLAB is opened, load the project through *File > Open Project* and then select the file `CAN_bus_x.mc3`, where X denotates the firmware for each of the microcontrollers.
 This will open the work environment, where `main.c` is the code file that will be compiled into the PIC. The project properties are accessed through *Production > Set Project Configuration > Customize...*, where the PICkit4 needs to be selected in the *Connected Hardware Tool* menu.
