@@ -3,7 +3,7 @@
  * PIC firmware for interfacing with an absolute CUI encoder through CAN.
  *
  * Copyright: 2023 (C) Universidad Carlos III de Madrid
- * Original author: Alberto Rodríguez Sanz (master's thesis, UC3M, 2023)
+ * Original author: Alberto RodrÃ­guez Sanz (master's thesis, UC3M, 2023)
  * CopyPolicy: Released under the terms of the LGPLv2.1 or later
  */
 
@@ -29,7 +29,7 @@ void program_AksIM();
 
 // -- CAN bus communication variables
 
-int pushFlag = 0; // flag para saber si está ejecutando el PUSH
+int pushFlag = 0; // flag para saber si estÃ¡ ejecutando el PUSH
 uint8_t delay;
 uint8_t  message[4];
 uint32_t position_bits, temp;
@@ -98,7 +98,7 @@ void main(void)
                 if (pushFlag)
                 {
                     sendData(0x80);
-                    __delay_ms(10);    // For a 16MHz frequency the period equates to 0.0625 µs. 
+                    __delay_ms(10);    // For a 16MHz frequency the period equates to 0.0625 Âµs. 
                 }
 
                 continue;   
@@ -146,12 +146,12 @@ void sendData(unsigned int op)
     The SPI module is setup to be in "Full-Duplex Mode" (TXR = 1, RXR = 1) even though the slave device (encoder) does not read the MOSI line. 
     The transmitted values were selected for ease of measuring with an oscilloscope.
     
-    *   Bit 31:10 -> Posición del encoder + zero padding bits - Alineado a la izquierda, MSB primero    ->   El módelo seleccionado MB049 tiene una resolución de 19 bits (28-10, 3 bits)
-	*	Bit 9 -> Error, si es '0' la información de la posición no es válida
-	*	Bit 8 -> Advertencia, si es '0' la información de la posición es válida pero opera en condición límites
+    *   Bit 31:10 -> PosiciÃ³n del encoder + zero padding bits - Alineado a la izquierda, MSB primero    ->   El mÃ³delo seleccionado MB049 tiene una resoluciÃ³n de 19 bits (28-10, 3 bits)
+	*	Bit 9 -> Error, si es '0' la informaciÃ³n de la posiciÃ³n no es vÃ¡lida
+	*	Bit 8 -> Advertencia, si es '0' la informaciÃ³n de la posiciÃ³n es vÃ¡lida pero opera en condiciÃ³n lÃ­mites
 	*	Bit 7:0 ->	CRC invertido, 0x97 polinomial
 	*
-	*	Estos bits se dividen en 4 bytes que envía el encoder
+	*	Estos bits se dividen en 4 bytes que envÃ­a el encoder
 	*	Byte 0: 31 - 24
 	*	Byte 1: 23 - 16
 	*	Byte 2: 15 - 8
@@ -166,7 +166,7 @@ void sendData(unsigned int op)
     PORTAbits.RA5 = 0;  //This is not really necessary since the module is configured to begin transfer once the transfer counter and the transmit buffer are loaded
     SPI1TCNTL = 4;  //The transfer counter is loaded 
     
-	SPI1TXB = 0xFF; // First byte is exchanged, 0x33 = 0b01101001  -> buffer[0]  
+    SPI1TXB = 0xFF; // First byte is exchanged, 0x33 = 0b01101001  -> buffer[0]  
     SPI1TXB = 0x00; // Second byte is exchanged, 0x55 = 0b01010101  -> buffer[1]
     __delay_us(3.75);	// A delay is added matching the clock frequency for 15 bits so that the first byte is already exchanged (the second close to ending). A new byte can be loaded into the transfer buffer
     data_RX[0] = SPI1RXB;
