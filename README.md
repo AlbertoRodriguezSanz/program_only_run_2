@@ -67,7 +67,7 @@ Install MPLAB X IDE tool for Windows, Linux or MAC from the following link ([dow
 
 ## Operation
 
-Once MPLAB is opened, load the project through *File > Open Project* and then select the file `CAN_bus_x.mc3`, where X denotates the firmware for each of the microcontrollers.
+Once MPLAB is opened, load the project through *File > Open Project* and then select the file `Program_Run_Only_Mode.mc3`, where X denotates the firmware for each of the microcontrollers.
 This will open the work environment, where `main.c` is the code file that will be compiled into the PIC. The project properties are accessed through *Production > Set Project Configuration > Customize...*, where the PICkit4 needs to be selected in the *Connected Hardware Tool* menu.
 
 ![Screenshot from 2023-09-01 14-19-52](https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/248a38f8-ebf5-4f62-97c1-47c6fd496216)
