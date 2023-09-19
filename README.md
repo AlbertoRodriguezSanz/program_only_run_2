@@ -13,7 +13,9 @@ For this test the PICkit4 in-circuit debugger/programmer will be used to load th
 - VDD
 - VSS
 
-![aksim_breadboard_schematic](https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/1104a0e5-f70c-4263-bd45-a73b40d29ae9)
+<p align = "center">
+<img src="https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/1104a0e5-f70c-4263-bd45-a73b40d29ae9" width = 700>
+</p>
 
 ## Device configuration
 
@@ -57,8 +59,9 @@ No filters or masks are setup for the CAN bus communications beforehand. Message
 ## SPI module configuration
 
 The SPI module is implemented through the peripheral libraries included in the MCC plugin, which defines one abstraction layer. 
-
-![spi_Master_fsl](https://github.com/AlbertoRodriguezSanz/SPI-Master-Transmit-Only-Test/assets/95371514/3aa8eacd-1583-4173-91d7-bd830cbe2b16)
+<p align = "center">
+<img src="https://github.com/AlbertoRodriguezSanz/SPI-Master-Transmit-Only-Test/assets/95371514/3aa8eacd-1583-4173-91d7-bd830cbe2b16">
+</p>
 
 - SPI Mode 0
   - Bit Count Mode (BMODE): 0
@@ -87,7 +90,9 @@ Install MPLAB X IDE tool for Windows, Linux or MAC from the following link ([dow
 Once MPLAB is opened, load the project through *File > Open Project* and then select the file `Program_Run_Only_Mode.mc3`, where X denotates the firmware for each of the microcontrollers.
 This will open the work environment, where `main.c` is the code file that will be compiled into the PIC. The project properties are accessed through *Production > Set Project Configuration > Customize...*, where the PICkit4 needs to be selected in the *Connected Hardware Tool* menu.
 
-![Screenshot from 2023-09-01 14-19-52](https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/248a38f8-ebf5-4f62-97c1-47c6fd496216)
+<p align = "center">
+<img src="https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/248a38f8-ebf5-4f62-97c1-47c6fd496216">
+</p>
 
 Modify the following options from the default parameters for the PICkit4 programmer from the Option categories dropdown menu.
 -Power
@@ -113,6 +118,7 @@ A 1 Mbps CAN channel is used to interface with the receiver code running on the 
 | start push mode                            | 0x01 (byte 0)<br>*delay* (byte 1) | empty             | 0x100   |
 | stop push mode                             | 0x02                              | empty             | 0x100   |
 | poll current value                         | 0x03                              | *value* (4 bytes) | 0x180   |
+
 
 Example of the expected bit timing diagram for both devices operating at a bus clock of 4MHz exchanging 4 bytes of data uninterrupted probed from the Slave device. 
 
