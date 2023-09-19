@@ -6,8 +6,6 @@ A breadboard with a PIC18F26K83 microcontroller connected to a MCP2561 CAN trans
 
 ![test_aksim_protoboard](https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/3b540673-f208-4e69-af36-876ea7630fef)
 
-
-
 For this test the PICkit4 in-circuit debugger/programmer will be used to load the firmware into the microcontroller. This needs to be connected to the microcontroller with the following pins.
 - MCLR (needs to be connected through two series pull-up resistors: 10kΩ and 100-470Ω to the power supply)
 - PGD
@@ -17,8 +15,7 @@ For this test the PICkit4 in-circuit debugger/programmer will be used to load th
 
 The microcontrollers are connected through two MCP2561 CAN transceivers. Two termination resistors are used to reduce the reflections between the two CAN signals. The two connectors represent the PICKIT4 pins required for programming each of the two microcontrollers. 
 
-![CAN_SPI_COMBINED_BREADBOARD_SCHEMATIC](https://github.com/AlbertoRodriguezSanz/CAN-SPI-combined-test/assets/95371514/73dd19ac-99d1-4d03-aa4f-65dd76d71c20)
-
+![aksim_breadboard_schematic](https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/1104a0e5-f70c-4263-bd45-a73b40d29ae9)
 
 ## Device configuration
 
