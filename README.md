@@ -2,9 +2,10 @@
 This repository contains the adapted firmware from the current PIC18F2580 microcontroller for the new PIC18F26K83 microcontroller implementing the updated versions of the ECAN and SPI modules working in the "Run" device operation mode, which does not include any power saving modes of operation or features. 
 
 ## Setup
-A breadboard with two PIC18F26K83 microcontrollers connected through two MCP2561 CAN transceivers is used as a testbench. 
+A breadboard with a PIC18F26K83 microcontroller connected to a MCP2561 CAN transceiver is used to communicate with the host node (computer) through the CAN bus. The microcontroller is connected as well to the AksIM-2 absolute encoder through a shielded cable with the required connections for SPI communication. 
 
-![CAN_SPI_Combined_Breadboard](https://github.com/AlbertoRodriguezSanz/CAN-SPI-combined-test/assets/95371514/404d348b-14a0-4436-b22a-9cd55a8368b2)
+![test_aksim_protoboard](https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/3b540673-f208-4e69-af36-876ea7630fef)
+
 
 
 For this test the PICkit4 in-circuit debugger/programmer will be used to load the firmware into the microcontroller. This needs to be connected to the microcontroller with the following pins.
