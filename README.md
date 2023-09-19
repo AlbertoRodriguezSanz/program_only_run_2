@@ -14,7 +14,7 @@ For this test the PICkit4 in-circuit debugger/programmer will be used to load th
 - VDD
 - VSS
 
-The microcontrollers are connected through two MCP2561 CAN transceivers. For such short distances, the use of termination resistors is not required. The two connectors represent the PICKIT4 pins required for programming each of the two microcontrollers. 
+The microcontrollers are connected through two MCP2561 CAN transceivers. Two termination resistors are used to reduce the reflections between the two CAN signals. The two connectors represent the PICKIT4 pins required for programming each of the two microcontrollers. 
 
 ![CAN_SPI_COMBINED_BREADBOARD_SCHEMATIC](https://github.com/AlbertoRodriguezSanz/CAN-SPI-combined-test/assets/95371514/73dd19ac-99d1-4d03-aa4f-65dd76d71c20)
 
@@ -59,7 +59,27 @@ No filters or masks are setup for the CAN bus communications beforehand. Message
  
 ## SPI module configuration
 
-Unlike previous tests the SPI module is not implemented through the Foundation Service Libraries (FSL) integrated in the MCC. The specifics for each microcontroller are described on the respective README files.
+The SPI module is implemented through the peripheral libraries included in the MCC plugin, which defines one abstraction layer. 
+
+![spi_Master_fsl](https://github.com/AlbertoRodriguezSanz/SPI-Master-Transmit-Only-Test/assets/95371514/3aa8eacd-1583-4173-91d7-bd830cbe2b16)
+
+- SPI Mode 0
+  - Bit Count Mode (BMODE): 0
+  - Bus: Master
+  - MSB transmitted first
+  - Sample Data Inout: Middle
+  - Clock Transition: Active to Idle
+  - Idle State of Clock: Low Level
+  - Slave Select Active: Low Level
+  - SDI Active: High Level
+  - SDO Active: High Level
+- Transfer Settings
+  - Slave Select value: driven to the active state while transmit counter is not zero
+  - Transmit: Enabled
+  - Receive: Enabled
+- Clock Settings
+  - Clock Source: High Frequency Internall Oscillator
+  - Baud Clock: 4MHz
   
 ## Requirements
 
