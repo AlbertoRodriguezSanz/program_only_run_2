@@ -1,14 +1,46 @@
 # AksIM2-PIC18f26k83-Firmware
 This repository contains the adapted firmware from the current PIC18F2580 microcontroller for the new PIC18F26K83 microcontroller implementing the updated versions of the ECAN and SPI modules working in the "Run" device operation mode, which does not include any power saving modes of operation or features. 
 
-
-
 ## Setup
-A breadboard with two PIC18F26K83 microcontrollers connected through two MCP2561 CAN transceivers is used as a testbench.
-![broadboard_can_bus_top_viewjpg](https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/c0f4a20e-199d-4b0a-b0b2-8a69f7578277)
+A breadboard with two PIC18F26K83 microcontrollers connected through two MCP2561 CAN transceivers is used as a testbench. 
+
+![CAN_SPI_Combined_Breadboard](https://github.com/AlbertoRodriguezSanz/CAN-SPI-combined-test/assets/95371514/404d348b-14a0-4436-b22a-9cd55a8368b2)
+
+
+For this test the PICkit4 in-circuit debugger/programmer will be used to load the firmware into the microcontroller. This needs to be connected to the microcontroller with the following pins.
+- MCLR (needs to be connected through two series pull-up resistors: 10kΩ and 100-470Ω to the power supply)
+- PGD
+- PGC
+- VDD
+- VSS
+
+The microcontrollers are connected through two MCP2561 CAN transceivers. For such short distances, the use of termination resistors is not required. The two connectors represent the PICKIT4 pins required for programming each of the two microcontrollers. 
+
+![CAN_SPI_COMBINED_BREADBOARD_SCHEMATIC](https://github.com/AlbertoRodriguezSanz/CAN-SPI-combined-test/assets/95371514/73dd19ac-99d1-4d03-aa4f-65dd76d71c20)
+
+
+## Device configuration
+
+- Configuration bits (CONFIG1-5H/L registers)
+  - Oscillator source at power-up: High frequency internall oscillator with no clock division applied
+  - Master Clear and Low Voltage Programming: MCLR and LVP are enabled, making the MCLR pin work for as a master clear for programming.
+  - Brown-out Reset: Disabled, device will not reset when voltage drops under a certain threshold.
+  - Watchdog Timer: Disabled, the Windowed Watchdog Timer will not be enabled for this test, to check for timing inaccuracies while executing instructions.
+- Clock Manager (OSCCON1 and OSCFRQ registers)
+  -   Clock Frequency: 16MHz, proceeding from a 64MHz base High-Frequency Oscillator Clock
+- Pin Manager:
+  -  CAN Transmit (CANTX0) -> RB2 (output)
+  -  CAN Receive (CANRX0) -> RB3 (input)
+  -  LED pin -> RC2 (output)
+  -  Slave Select -> RA5 (Master -> output / Slave -> input)
+  -  SPI clock -> RC3 (Master -> output / Slave -> input)
+  -  SPI Data Out (SDO) -> RC5 (output)
+  -  SPI Data In (SDI) -> RC4 (input)
+
 
 ## ECAN module configuration
-The following parameters are configured with the Microchip Code Configurator plugin (MCC):
+
+Both microcontrollers implement these module parameters through the Microchip Code Configurator plugin (MCC):
 - Clock Settings
   - Clock Source: Use system clock as CAN system clock
   - Clock Frequency: 16MHz
@@ -24,17 +56,10 @@ The following parameters are configured with the Microchip Code Configurator plu
   - Operation Mode: Mode 0 (Legacy)
 
 No filters or masks are setup for the CAN bus communications beforehand. Messages' ID are filtered in the `main.c` file as in the previous firmware for the PIC18F2580 microcontroller.
+ 
+## SPI module configuration
 
-For this test the PICkit4 in-circuit debugger/programmer will be used to load the firmware into the microcontroller. This needs to be connected to the microcontroller with the following pins.
-- MCLR (needs to be connected through two series pull-up resistors: 10kΩ and 100-470Ω to the power supply)
-- PGD
-- PGC
-- VDD
-- VSS
-
-<p align = "center">
-<img src="https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/3c4a5d15-1f9f-4ac2-9d40-555727d5c120" width = "600" />
-</p>
+Unlike previous tests the SPI module is not implemented through the Foundation Service Libraries (FSL) integrated in the MCC. The specifics for each microcontroller are described on the respective README files.
   
 ## Requirements
 
@@ -44,6 +69,7 @@ Install MPLAB X IDE tool for Windows, Linux or MAC from the following link ([dow
 
 Once MPLAB is opened, load the project through *File > Open Project* and then select the file `CAN_bus_x.mc3`, where X denotates the firmware for each of the microcontrollers.
 This will open the work environment, where `main.c` is the code file that will be compiled into the PIC. The project properties are accessed through *Production > Set Project Configuration > Customize...*, where the PICkit4 needs to be selected in the *Connected Hardware Tool* menu.
+
 ![Screenshot from 2023-09-01 14-19-52](https://github.com/AlbertoRodriguezSanz/CAN-Bus-Test/assets/95371514/248a38f8-ebf5-4f62-97c1-47c6fd496216)
 
 Modify the following options from the default parameters for the PICkit4 programmer from the Option categories dropdown menu.
@@ -53,13 +79,12 @@ Modify the following options from the default parameters for the PICkit4 program
 - PICkit4 Tool Options
   - Program Speed: Low (Otherwise an error will pop up when trying to load the firmware).
 
-First, modify the `canId` variable corresponding to the ID of that encoder. The correspondence is detailed in [this diagram](https://robots.uc3m.es/teo-developer-manual/diagrams.html#joint-indexes). A value of 100 must be added to the ID of the iPOS node. Example: for the elbow of the left arm joint ID 24, use `canId = 124`.
-
 Then, follow the next steps:
-* Compile: `Project> Build All`
-* Select the programmer: `Programmer> Select Programmer> MPLAB ICD 2`
-* Connect the programmer to the PIC: `Programmer> Connect`
-* Program: `Programmer> Program`
+* Compile: `Production> Build Main Project`
+* Program: `Production> Make and Program Device Main Project`
+
+
+
 
 ## Interfacing with the AksIM-2 encoder
 
