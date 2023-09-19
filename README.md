@@ -74,8 +74,7 @@ A 1 Mbps CAN channel is used to interface with the receiver code running on the 
 
 Example of the expected bit timing diagram for both devices operating at a bus clock of 4MHz exchanging 4 bytes of data uninterrupted probed from the Slave device. 
 
-![SPI_full_duplex_4_bytes_wirepuller](https://github.com/AlbertoRodriguezSanz/SPI-Master-Full-Duplex-Test/assets/95371514/8cec0679-3de8-4592-b545-275d96177c6c)
-
+![aksim_test_spi](https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/79aa7ae9-2297-4425-98a8-715deb917421)
 
 - Channel 1 (Yellow): Slave Select (SS)
 - Channel 2 (Green): SPI Clock (SCK)
