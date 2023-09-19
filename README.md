@@ -2,7 +2,7 @@
 This repository contains the adapted firmware from the current PIC18F2580 microcontroller for the new PIC18F26K83 microcontroller implementing the updated versions of the ECAN and SPI modules working in the "Run" device operation mode, which does not include any power saving modes of operation or features. 
 
 ## Setup
-A breadboard with a PIC18F26K83 microcontroller connected to a MCP2561 CAN transceiver is used to communicate with the host node (computer) through the CAN bus. The microcontroller is connected as well to the AksIM-2 absolute encoder through a shielded cable with the required connections for SPI communication. 
+A breadboard with a PIC18F26K83 microcontroller connected to a MCP2561 CAN transceiver is used to communicate with the host node (computer) through the CAN bus. The microcontroller is connected as well to the AksIM-2 absolute encoder through a shielded cable with the required connections for SPI communication. The absolute encoder calbe includes two extra wires for the temperature sensors which are not planned to be used. These two wires are not considered in the are left floating. Termination resistors are used to to reduce reflections between the CAN signals. 
 
 ![test_aksim_protoboard](https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/3b540673-f208-4e69-af36-876ea7630fef)
 
@@ -12,8 +12,6 @@ For this test the PICkit4 in-circuit debugger/programmer will be used to load th
 - PGC
 - VDD
 - VSS
-
-The microcontrollers are connected through two MCP2561 CAN transceivers. Two termination resistors are used to reduce the reflections between the two CAN signals. The two connectors represent the PICKIT4 pins required for programming each of the two microcontrollers. 
 
 ![aksim_breadboard_schematic](https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/1104a0e5-f70c-4263-bd45-a73b40d29ae9)
 
@@ -30,8 +28,9 @@ The microcontrollers are connected through two MCP2561 CAN transceivers. Two ter
   -  CAN Transmit (CANTX0) -> RB2 (output)
   -  CAN Receive (CANRX0) -> RB3 (input)
   -  LED pin -> RC2 (output)
-  -  Slave Select -> RA5 (Master -> output / Slave -> input)
-  -  SPI clock -> RC3 (Master -> output / Slave -> input)
+  -  LED pin -> RC1 (output)
+  -  Slave Select -> RA5 (output)
+  -  SPI clock -> RC3 (output)
   -  SPI Data Out (SDO) -> RC5 (output)
   -  SPI Data In (SDI) -> RC4 (input)
 
