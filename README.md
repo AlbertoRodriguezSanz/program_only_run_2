@@ -93,6 +93,12 @@ The SPI module is implemented through the peripheral libraries included in the M
 - Clock Settings
   - Clock Source: High Frequency Internall Oscillator
   - Baud Clock: 4MHz
+
+Reading the encoder measurement requires a continous four byte exchange between the microcontroller working as the master device and the AksIM-2 working as the slave.
+
+![aksim_spi_bit_diagram](https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/d50335c4-4953-4954-a0bc-1a8d8e56b9e8)
+
+This implemented by timing the buffer read and write operations considering the device's and the bus' frequency clocks. The master alternates a sequence of 0xFF and 0x00 bytes for ease of readibility.
   
 ## Requirements
 
