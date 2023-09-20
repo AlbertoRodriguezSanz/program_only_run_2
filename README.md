@@ -119,12 +119,12 @@ Modify the following options from the default parameters for the PICkit4 program
   - Voltage Level: 5V.
 - PICkit4 Tool Options
   - Program Speed: Low (Otherwise an error will pop up when trying to load the firmware).
+ 
+First, modify the `canId` variable corresponding to the ID of that encoder. The correspondence is detailed in [this diagram](https://robots.uc3m.es/teo-developer-manual/diagrams.html#joint-indexes). A value of 100 must be added to the ID of the iPOS node. For the neck joint IDs of 27 and 28 need to be assigned for each component. For example: for the horizontal component use `canId = 128`.
 
 Then, follow the next steps:
 * Compile: `Production> Build Main Project`
 * Program: `Production> Make and Program Device Main Project`
-
-
 
 
 ## Interfacing with the AksIM-2 encoder
