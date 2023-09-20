@@ -138,6 +138,7 @@ A 1 Mbps CAN channel is used to interface with the receiver code running on the 
 | stop push mode                             | 0x02                              | empty             | 0x100   |
 | poll current value                         | 0x03                              | *value* (4 bytes) | 0x180   |
 
+## SPI Test
 
 Example of the expected bit timing diagram for both devices operating at a bus clock of 4MHz exchanging 4 bytes of data uninterrupted probed from the Slave device. 
 
@@ -147,6 +148,17 @@ Example of the expected bit timing diagram for both devices operating at a bus c
 - Channel 2 (Green): SPI Clock (SCK)
 - Channel 3 (Purple): Slave Serial Data Out (SDO, MISO)
 - Channel 4 (Blue): Slave Serial Data In (SDI, MOSI)
+
+## CAN bus Test
+
+Example of a random message generated from the host (PC) through the `cangen can0 -g 100`command
+
+![cangen](https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/828177b9-7e01-4667-ab96-81109f0023a8)
+
+- Channel 1 (Yellow): CAN-High (CANH)
+- Channel 2 (Green): CAN-Low (CANL)
+- Channel 3 (Purple): CAN Transmit (CANTX)
+- Channel 4 (Blue): CAN Receive (CANRX)
 
 ## See also
 
