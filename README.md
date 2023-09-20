@@ -2,9 +2,19 @@
 This repository contains the adapted firmware from the current PIC18F2580 microcontroller for the new PIC18F26K83 microcontroller implementing the updated versions of the ECAN and SPI modules working in the "Run" device operation mode, which does not include any power saving modes of operation or features. 
 
 ## Setup
-A breadboard with a PIC18F26K83 microcontroller connected to a MCP2561 CAN transceiver is used to communicate with the host node (computer) through a PEAK PCAN-USB adapter. This device is connected to the breadboard through three wires: CANH, CANL and GND following the schematic of the DB9 connector. Termination resistors are used to to reduce reflections between the CAN signals. 
 
-The microcontroller is connected as well to the AksIM-2 absolute encoder through a shielded cable with the required connections for SPI communication. The absolute encoder calbe includes two extra wires for the temperature sensors which are not planned to be used. These two wires are not considered in the are left floating. 
+![test_aksim_setup](https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/6babee60-c476-4803-88c7-9f43585d0d51)
+
+
+A breadboard with a PIC18F26K83 microcontroller connected to a MCP2561 CAN transceiver is used to communicate with the host node (computer) through a PEAK PCAN-USB adapter. This device is connected to the breadboard through three wires: CANH, CANL and GND following the schematic of the DB9 connector. 
+
+<p align = "center">
+<img src="https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/578a9471-3611-41f9-a45a-9860817f8b75" width = 700>
+</p>
+
+
+The microcontroller is connected as well to the AksIM-2 absolute encoder through a shielded cable with the required connections for SPI communication. The absolute encoder calbe includes two extra wires for the temperature sensors which are not planned to be used. These two wires are not considered in the are left floating. Termination resistors are used on both ends of the CAN bus to reduce reflections between the signals. 
+
 ![test_aksim_protoboard](https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/3b540673-f208-4e69-af36-876ea7630fef)
 
 For this test the PICkit4 in-circuit debugger/programmer will be used to load the firmware into the microcontroller. This needs to be connected to the microcontroller with the following pins.
@@ -14,7 +24,7 @@ For this test the PICkit4 in-circuit debugger/programmer will be used to load th
 - VDD
 - VSS
 
-When testing only the SPI communications with the absolute encoder, the power supplied by the PICkit4 tool suffices. However, connecting the CAN 
+When testing only the SPI communications with the absolute encoder, the power supplied by the PICkit4 tool suffices. However, connecting the PCAN-USB adapter makes the CAN transceiver draw more current combined with the AksIM-2 encoder than the maximum 50mA. A more capable power supply needs to be used instead.
 
 <p align = "center">
 <img src="https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/1104a0e5-f70c-4263-bd45-a73b40d29ae9" width = 700>
