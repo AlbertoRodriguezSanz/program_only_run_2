@@ -24,7 +24,7 @@ For this test the PICkit4 in-circuit debugger/programmer will be used to load th
 - VDD
 - VSS
 
-When testing only the SPI communications with the absolute encoder, the power supplied by the PICkit4 tool suffices. However, connecting the PCAN-USB adapter makes the CAN transceiver draw more current combined with the AksIM-2 encoder than the maximum 50mA. A more capable power supply needs to be used instead.
+When testing only the SPI communications with the absolute encoder, the power supplied by the PICkit4 tool suffices. However, connecting the PCAN-USB adapter makes the CAN transceiver draw more current combined with the AksIM-2 encoder than the maximum 50mA. A more capable power supply needs to be used instead, leaving the PICkit4 tool only for programming the microcontroller. During runtime all the connections from the PICkit4 need to be disconnected from the breadboard.
 
 <p align = "center">
 <img src="https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/1104a0e5-f70c-4263-bd45-a73b40d29ae9" width = 700>
