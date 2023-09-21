@@ -3,7 +3,7 @@ This repository contains the adapted firmware from the current PIC18F2580 microc
 
 ## Setup
 
-![test_aksim_setup](https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/6babee60-c476-4803-88c7-9f43585d0d51)
+![aksim_spi_test_setup](https://github.com/AlbertoRodriguezSanz/aksim_2_pic_firmware/assets/95371514/8c2a3f9c-4bfe-4cf8-a306-14e454fdead2)
 
 
 A breadboard with a PIC18F26K83 microcontroller connected to a MCP2561 CAN transceiver is used to communicate with the host node (computer) through a PEAK PCAN-USB adapter. This device is connected to the breadboard through three wires: CANH, CANL and GND following the schematic of the DB9 connector. 
