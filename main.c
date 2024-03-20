@@ -17,7 +17,7 @@
 
 // Configurable variable (CAN_ID)
 // --------------------------------------------------------------
-const unsigned long canId = 120;        //120 = 0x78
+const unsigned long canId = 120;        //This value needs to be changed for each absolute encoder, adding 100 to the respective CAN id of the joint
 // --------------------------------------------------------------
 
 // -- Function prototypes
@@ -60,39 +60,15 @@ void main(void)
     
     //Acknowledge message sent when the PIC is powered on
     sendAck(0x200);
-    LATCbits.LC1 = 1;
     
     while (1)
-    {   
-        
-        
-        /*
-        if (RXB0CONbits.RXFUL == 0)
-        {
-            LATCbits.LATC6 = 1;
-        }
-        else if(RXB1CONbits.RXFUL == 0)
-        {
-            LATCbits.LATC7 = 1;
-        }
-        
-        */
-       /*
-         LATCbits.LATC6 = 1;
-        LATCbits.LATC7 = 1;
-       
-        LATBbits.LATB0 = 1;
-        LATBbits.LATB1 = 1;
-        PORTBbits.RB0 = 1;
-        PORTBbits.RB1 = 1;*/
-        
+    {           
         //Try with the ADCON register to see if the LEDS light up that way
         
          //--------------- Recibo!!! ------------------
         
         if (CAN_receive(&ReceiveMsg))
         {
-            LATCbits.LC2 = 1;
             if (ReceiveMsg.frame.id!= canId)
             {
                 if (pushFlag)
@@ -162,6 +138,7 @@ void sendData(unsigned int op)
     
     //SPI module is enabled
     SPI1_Open(MASTER_0);
+	
     //SS line is held low to begin communication
     PORTAbits.RA5 = 0;  //This is not really necessary since the module is configured to begin transfer once the transfer counter and the transmit buffer are loaded
     SPI1TCNTL = 4;  //The transfer counter is loaded 
@@ -182,16 +159,17 @@ void sendData(unsigned int op)
     //SS line is held high to end communication     
     PORTAbits.RA5 = 1;
     //SPI module is disabled
-    SPI1_Close();
-    LATCbits.LC2 = 1;
-      
-    
+    SPI1_Close();      
+
+    //Position bits are extracted from the 4 byte message
     position_bits = ((uint32_t)data_RX[2] >> 2) + ((uint32_t)data_RX[1] << 6) + ((uint32_t)data_RX[3] << 14);
 	//position_bits = data_RX[2] >> 2 | data_RX[1] << 6 | data_RX[3] << 14;
+
+    //Position bits are converted to degrees
     degrees = (360 / pow (2,17)-1) * (double)position_bits;      // One unit is subtracted from the total number of bits since it begins in 0
     memcpy(&temp, &degrees, 4);
 
-    
+    //CAN bus message structure
     x = 0;
     uCAN_MSG SendMsg;
     SendMsg.frame.idType = dSTANDARD_CAN_MSG_ID_2_0B;
@@ -217,12 +195,12 @@ void sendData(unsigned int op)
 
 void sendAck(unsigned int op)
 {
-	x = 0;
+    x = 0;
     uCAN_MSG AckMsg;
     AckMsg.frame.idType = dSTANDARD_CAN_MSG_ID_2_0B;
-    AckMsg.frame.id = op+canId;      //op+canId 
+    AckMsg.frame.id = op+canId;      
     AckMsg.frame.dlc = 1; 
-    AckMsg.frame.data0 = 0x33;
+    AckMsg.frame.data0 = 0x00;
    
 	while (!x)
 	{
