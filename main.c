@@ -1,6 +1,6 @@
 
 /*
- * PIC firmware for interfacing with an absolute CUI encoder through CAN.
+ * PIC firmware for interfacing with an AksIM-2 absolute encoder through CAN.
  *
  * Copyright: 2023 (C) Universidad Carlos III de Madrid
  * Original author: Alberto Rodríguez Sanz (master's thesis, UC3M, 2023)
