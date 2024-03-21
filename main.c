@@ -17,7 +17,7 @@
 
 // Configurable variable (CAN_ID)
 // --------------------------------------------------------------
-const unsigned long canId = 120;        //This value needs to be changed for each absolute encoder, adding 100 to the respective CAN id of the joint
+const unsigned long canId = 127;        //This value needs to be changed for each absolute encoder, adding 100 to the respective CAN id of the joint
 // --------------------------------------------------------------
 
 // -- Function prototypes
